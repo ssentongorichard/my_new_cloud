@@ -1,0 +1,47 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  title Non-Responsive Table
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet', href='css/table.css')
+  link(href='bootstrap/css/bootstrap.css', rel='stylesheet')
+#nav-tab.nav.nav-tabs(role='tablist')
+#page-wrap
+  h1 Orders List
+  div
+    form(method="GET" action='/productlist')
+          button.btn.btn-primary.btn-block(type='submit') Approve New Product
+  table
+    tr
+        th Product Category 
+        th Customer Email
+        th Customer Address
+        th Product 
+        th More
+        th Product Image Image
+        th Changes
+    tbody 
+        if goods.length
+            each item in goods
+                if item.availability  == "booked"
+                     tr.tds 
+                            td #{item.productcategory}
+                            td #{item.customeremail}
+                            td #{item.customeraddress}
+                            td #{item.productname}
+                            td #{item.producttype}
+                            td 
+                                img(src="/"+item.productimage, alt="Image" width='150px' height="150px") 
+                            //- td #{moment(us
+                            td
+                                a.btn.btn-success.btn-block(href='/produce/update/'+item._id) Update
+                                a.btn.btn-secondary.btn-block(href='/produce/available/'+item._id) Availability
+                                form(method="post" action='/produce/delete')
+                                    input(type="hidden" placeholder="" name="id", value=item._id)
+                                    button.btn.btn-danger.btn-block(type="submit") Delete
+        div.form-row
+            div.col.form-group
+                a(class='button' href='/agricOfficerDash') Back
+
+block footer
+    div.col-md-12 ©️ 2022 UFARM Masajja Tukolerewamu Incorporated

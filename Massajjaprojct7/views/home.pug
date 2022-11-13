@@ -1,0 +1,112 @@
+doctype html
+head
+  meta(charset='utf-8')
+  meta(http-equiv='X-UA-Compatible', content='IE=edge')
+  title Page Title
+  meta(name='viewport', content='width=device-width, initial-scale=1')
+  link(href='bootstrap/css/bootstrap.css' rel='stylesheet')
+  link(rel='stylesheet', type='text/css', media='screen', href='css/main.css')
+  script(src='main.js')
+  link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css')
+// nav bar
+nav.navbar.navbar-expand-lg.fixed-top.navbgcolor
+  .container-fluid
+    a.navbar-brand.white(href='#')
+      h4  UFARM
+    button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    #navbarSupportedContent.collapse.navbar-collapse
+      ul.navbar-nav.me-auto.mb-2.mb-lg-0
+        li.nav-item.dropdown
+          a.nav-link.dropdown-toggle(href='#', role='button', data-bs-toggle='dropdown', aria-expanded='false', style='color:white;')
+            | Market
+          ul.dropdown-menu
+            li
+              a.dropdown-item(href='#') Pricing
+            li
+              a.dropdown-item(href='#') Make booking
+            li
+              hr.dropdown-divider
+            li
+              a.dropdown-item(href='#') Something else here
+        li
+          a.nav-link.white(aria-current='page', href='#') Home
+        li
+          a.nav-link.white(href='#') About Us
+      form.d-flex
+        .container-fluid
+          a.navbar-brand.white(href='#')
+            a.btn.btn-success(href='#') Login
+          button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+            span.navbar-toggler-icon
+          #navbarSupportedContent.collapse.navbar-collapse
+// Carousel
+#demo.carousel.slide(data-bs-ride='carousel', carousel-caption='', align-items-center='', d-flex='')
+  // Indicators/dots
+  .carousel-indicators
+    button.active(type='button', data-bs-target='#demo', data-bs-slide-to='0')
+    button(type='button', data-bs-target='#demo', data-bs-slide-to='1')
+    button(type='button', data-bs-target='#demo', data-bs-slide-to='2')
+    button(type='button', data-bs-target='#demo', data-bs-slide-to='3')
+    button(type='button', data-bs-target='#demo', data-bs-slide-to='4')
+  div
+    div
+      img.d-block.img-fluid(src='image/2.jpg', alt='Los Angeles')
+      .carousel-caption.green
+        h3 Your number one supplier of agricultural products. 
+        p  We lead and others follow.
+        p +90 850 111 11 11
+        button.btn.btn-success(type='button', a='', href='#', style='height:60px ;') Go somewhere
+// End of background image
+.text-bg-dark.p-3
+  h1.center  FARM PRODUCTS
+  |   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet iste ullam sapiente optio beatae mollitia, magni, nostrum doloremque corporis maiores, natus dolores. Soluta accusamus vero aut ipsa, numquam vitae omnis?
+// Cards
+.container-fluid.bgcolor2
+  .container.bgcolor2
+    .row
+      .col-lg-4.col-md-6.col-12
+        .card-deck
+          .card.mb-4
+            img.card-img-top.img-fluid(src='image/3.jpg', alt='Card image cap')
+            .card-body
+              h4.card-title Spicy nyama
+              p.card-text
+                | This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+              p.card-text
+                small.text-muted Last updated 3 mins ago
+              a.btn.btn-success(href='#') Go somewhere
+      .col-lg-4.col-md-6.col-12
+        .card-deck
+          .card.mb-4
+            img.card-img-top.img-fluid(src='image/6.jpg', alt='Card image cap')
+            .card-body
+              h4.card-title Chocolate yoghurt
+              p.card-text
+                | This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+              p.card-text
+                small.text-muted Last updated 3 mins ago
+              a.btn.btn-success(href='#') Go somewhere
+      .col-lg-4.col-md-6.col-12
+        .card-deck
+          .card.mb-4
+            img.card-img-top.img-fluid(src='image/4.jpg', alt='Card image cap')
+            .card-body
+              h4.card-title Chicken to night
+              p.card-text
+                | This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+              p.card-text
+                small.text-muted Last updated 3 mins ago
+              a.btn.btn-success(href='#') Go somewhere
+// end of products
+.container-fluid(style='padding: 20px;')
+  p
+  h1.center
+    strong
+      | Market at your door 
+      i.bi.bi-cart4(style='color:green ;')
+  p
+// footer
+.row.text-bg-dark.container-fluid.ftmargin
+  | Contacts:Email ufarm123@gmail.com Mobile +256755174746
+script(src='bootstrap/js/bootstrap.bundle.js')

@@ -1,0 +1,41 @@
+extends layout
+block content
+    header.card-header
+        h4.card-title Farmer One Dashboard
+    br
+    nav
+    #nav-tab.nav.nav-tabs(role='tablist')
+        a#nav-profile-tab.nav-item.nav-link(href='/registerUrbanFarmer') Register Urban Farmer
+        a#nav-profile-tab.nav-item.nav-link(href='/urbanFarmerslist') List of Urban Farmers
+        a#nav-contact-tab.nav-item.nav-link(href='/#')  View Bookings/Orders
+        form(method="post" action='/logout') 
+            button.btn.btn-primary.btn-block(type="submit") Log out
+    #nav-tabContent.tab-content
+    h1 List of Products
+    .container
+        .row
+            .col-md-3.mx-4
+                h4.mb-5 Poultry Report
+                    .card.card-custom.mx-2.mb-3(style='width: 18rem;')
+                        .card-body
+                            h6 Products Quantity: #{totalP.totalQuantity}
+                            h6 Revenue Projection: #{new Intl.NumberFormat().format(totalP.totalCost)} UGX
+                             h6 Revenue Projection: #{totalP.totalCost} UGX
+                            p.card-text            
+            .col-md-3.mx-4
+                h4.mb-5 Dairy Report
+                    .card.card-custom.mx-2.mb-3(style='width: 18rem;')
+                        .card-body
+                            h6 Products Quantity: #{totalD.totalQuantity}
+                            h6 Revenue Projection: #{new Intl.NumberFormat().format(totalD.totalCost)} UGX
+                            p.card-text
+            
+            .col-md-3.mx-4
+                h4.mb-5 Horticulture Report
+                    .card.card-custom.mx-2.mb-3(style='width: 18rem;')
+                        .card-body
+                            h6 Products Quantity: #{totalH.totalQuantity}
+                            h6 Revenue Projection: #{new Intl.NumberFormat().format(totalH.totalCost)} UGX
+                            p.card-text
+block footer
+    div.col-md-12 © 2022 Refactory Cohort 12, NodeJS by Irene.

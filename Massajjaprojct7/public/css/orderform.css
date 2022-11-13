@@ -1,0 +1,72 @@
+
+:root {
+  --white-color:                  #FFFFFF;
+  --primary-color:                #f44749;
+  --secondary-color:              #f3af24;
+  --section-bg-color:             #F9F9F9;
+  --dark-color:                   #000000;
+  --title-color:                  #565758;
+  --news-title-color:             #292828;
+  --p-color:                      #717275;
+  --border-color:                 #eaeaea;
+  --border-radius-default:        .25rem;
+
+  --body-font-family:             'Montserrat', sans-serif;
+
+  --h1-font-size:                 76px;
+  --h2-font-size:                 56px;
+  --h3-font-size:                 42px;
+  --h4-font-size:                 28px;
+  --h5-font-size:                 26px;
+  --h6-font-size:                 22px;
+
+  --p-font-size:                  18px;
+  --menu-font-size:               18px;
+  --category-font-size:           14px;
+
+  --font-weight-light:            300;
+  --font-weight-normal:           400;
+  --font-weight-semibold:         600;
+  --font-weight-bold:             700;
+}
+
+
+
+
+
+
+.order-image {
+  border-radius: 100%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  max-width: 450px;
+  max-height: 450px;
+}
+
+/*---------------------------------------
+  CUSTOM FORM            
+-----------------------------------------*/
+.custom-form .form-control {
+  margin-bottom: 20px;
+  padding: 14px 10px;
+  
+}
+
+.custom-form button[type="submit"] {
+  background: var(--dark-color);
+  border: 0;
+  color: var(--white-color);
+  text-transform: uppercase;
+}
+
+.custom-form button[type="submit"]:hover {
+  background: var(--primary-color);
+}
+
+.padding-top{
+  padding-top: 100px;
+}
+
+
+

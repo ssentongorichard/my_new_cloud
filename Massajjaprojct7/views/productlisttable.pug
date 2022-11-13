@@ -1,0 +1,47 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  title Non-Responsive Table
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet', href='css/table.css')
+  link(href='bootstrap/css/bootstrap.css', rel='stylesheet')
+#nav-tab.nav.nav-tabs(role='tablist')
+#page-wrap
+  h1 Products List
+  div
+    form(method="GET" action='/ufarmerupload')
+          button.btn.btn-primary.btn-block(type='submit') Add New Product
+  table
+    tr
+        th Product Category 
+        th Product Name
+        th Product Type
+        th Product 
+        th More
+        th Product Image Image
+        th Changes
+    tbody 
+        if myproducts.length
+            each product in myproducts
+                if product.status == "Pending" && product.ward === currentUser.ward
+                     tr.tds 
+                            td #{product.productcategory}
+                            td item name
+                            td item name
+                            td #{product.productname}
+                            td #{product.producttype}
+                            td 
+                                img(src="/"+product.productimage, alt="Image" width='150px' height="150px") 
+                            //- td #{moment(us
+                            td
+                                a.btn.btn-success.btn-block(href='/produce/update/'+product._id) Update
+                                a.btn.btn-secondary.btn-block(href='/produce/approve/'+product._id) Approve
+                                form(method="post" action='/produce/delete')
+                                    input(type="hidden" placeholder="" name="id", value=product._id)
+                                    button.btn.btn-danger.btn-block(type="submit") Delete
+        div.form-row
+            div.col.form-group
+                a(class='button' href='/agricOfficerDash') Back
+
+block footer
+    div.col-md-12 ©️ 2022 UFARM Masajja Tukolerewamu Incorporated

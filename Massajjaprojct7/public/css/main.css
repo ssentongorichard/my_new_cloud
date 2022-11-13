@@ -1,0 +1,70 @@
+.rowh {
+    background-color: rgb(215, 245, 235);
+    width: 40px;
+    height: 40px; 
+}
+.nav1 {
+padding-top: 50px;
+}
+.carousel-caption{
+    transform: translateY(-50%) ;
+    bottom: initial;
+    top: 50%;
+}
+ .center {
+    align-content: center;
+    margin-left: 500px;
+ }
+ .card{
+    padding-top: 20px;
+    background-color: beige;
+ }
+.card div{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.cardimage{
+    height: 300px;
+    
+}
+.cardfooter{
+    background-color: rgb(213, 239, 205);
+}
+.para{
+    padding-top: 40px;
+}
+
+.navcolor{
+    background-color: aquamarine;
+}
+
+.fontcolor {
+    color:white;
+}
+.navimage {
+    margin-top: 20px;
+
+}
+.white{
+    color:white;
+}
+.bgcolor{
+    background-color: rgb(220, 222, 219);
+}
+.green{
+    color:green;
+}
+.bgcolor2{
+    background-color:rgb(201, 208, 204);
+}
+.navbgcolor{
+    background-color:rgb(13, 14, 13);
+}
+.ftmargin{
+    
+    height: 40px;
+}
+.btn-color{
+    color: white;
+}

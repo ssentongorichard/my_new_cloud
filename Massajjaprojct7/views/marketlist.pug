@@ -1,0 +1,180 @@
+doctype html
+head
+  meta(charset='utf-8')
+  meta(name='viewport', content='width=device-width, initial-scale=1')
+  meta(name='description', content='')
+  meta(name='author', content='')
+  title FARM PRODUCTS
+  link(rel='preconnect', href='https://fonts.googleapis.com')
+  link(rel='preconnect', href='https://fonts.gstatic.com', crossorigin='')
+  link(href='https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap', rel='stylesheet')
+  link(href='../css/bootstrap.min.css', rel='stylesheet')
+  link(href='../css/bootstrap-icons.css', rel='stylesheet')
+  link(href='../css/produce.css', rel='stylesheet')
+  link(rel='stylesheet', type='text/css', href='../css/main.css')
+// nav bar
+nav.navbar.navbar-expand-lg.fixed-top.navbgcolor
+  .container-fluid
+    a.navbar-brand.white(href='#')
+      h4  UFARM
+    button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    #navbarSupportedContent.collapse.navbar-collapse
+      ul.navbar-nav.me-auto.mb-2.mb-lg-0
+        li.nav-item.dropdown
+          a.nav-link.dropdown-toggle(href='#', role='button', data-bs-toggle='dropdown', aria-expanded='false', style='color:white;')
+            | Market
+          ul.dropdown-menu
+            li
+              a.dropdown-item(href='#') Pricing
+            li
+              a.dropdown-item(href='#') Make booking
+            li
+              hr.dropdown-divider
+            li
+              a.dropdown-item(href='#') Something else here
+        li
+          a.nav-link.white(aria-current='page', href='#') Home
+        li
+          a.nav-link.white(href='#') About Us
+      form.d-flex
+        .container-fluid
+          a.navbar-brand.white(href='#')
+            a.btn.btn-success(href='#') Login
+          button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+            span.navbar-toggler-icon
+          #navbarSupportedContent.collapse.navbar-collapse
+main
+  header.heading1.heading2
+    .container
+      .row
+        .col-lg-10.col-12.mx-auto
+          h1.text-white Our Products
+          strong.text-white Market at your door
+    .back
+  section.products.section-padding
+    .container
+      .row
+        .col-12
+          h2.mb-lg-5.mb-4 Dairy Products
+        if goods.length
+            each item in goods
+                .col-lg-4.col-md-6.col-12
+                    if item.status == "Approved" && item.productcategory == "Dairy" && item.availability == "available"
+                        .products-thumb
+                            img.img-fluid.products-image.img(src="/"+item.productimage, alt="Image") 
+                            .products-info.d-flex.flex-wrap.align-items-center
+                            h4.mb-0 #{item.productname}
+                            span.price-tag.bg-white.shadow-lg.ms-4
+                                small Ugx
+                                | #{item.unitprice}
+                            .d-flex.flex-wrap.align-items-center.w-100.mt-2
+                                h6.reviews-text.mb-0.me-3 +1%
+                                p.reviews-text.mb-0.ms-4 delivery
+                                a.btn.btn-secondary.btn-block(href='/produce/order/'+item._id) order
+                    else if item.status == "Approved" && item.productcategory == "Dairy" && item.availability == "booked"
+                        .products-thumb
+                            img.img-fluid.products-image.img(src="/"+item.productimage, alt="Image") 
+                            .products-info.d-flex.flex-wrap.align-items-center
+                            h4.mb-0 #{item.productname}
+                            span.price-tag.bg-white.shadow-lg.ms-4
+                                small Ugx
+                                | #{item.unitprice}
+                            .d-flex.flex-wrap.align-items-center.w-100.mt-2
+                                h6.reviews-text.mb-0.me-3 booked
+                                p.reviews-text.mb-0.ms-4 delivery
+                    else if item.status == "Approved" && item.productcategory == "Dairy" && item.availability == "N/A"
+                        .products-thumb
+                            img.img-fluid.products-image.img(src="/"+item.productimage, alt="Image" ) 
+                            .products-info.d-flex.flex-wrap.align-items-center
+                            h4.mb-0 #{item.productname}
+                            span.price-tag.bg-white.shadow-lg.ms-4
+                                small Ugx
+                                | #{item.unitprice}
+                            .d-flex.flex-wrap.align-items-center.w-100.mt-2
+                                h6.reviews-text.mb-0.me-3 N/A
+                                p.reviews-text.mb-0.ms-4 finished
+  section.products.section-padding.bg-white
+    .container
+      .row
+        .col-12
+          h2.mb-lg-5.mb-4 Hoticulture Products
+        if goods.length
+            each item in goods
+                .col-lg-4.col-md-6.col-12
+                    if item.status == "Approved" && item.productcategory == "Dairy" && item.availability == "available"
+                        .products-thumb
+                            img.img-fluid.products-image.img(src="/"+item.productimage, alt="Image") 
+                            .products-info.d-flex.flex-wrap.align-items-center
+                            h4.mb-0 #{item.productname}
+                            span.price-tag.bg-white.shadow-lg.ms-4
+                                small Ugx
+                                | #{item.unitprice}
+                            .d-flex.flex-wrap.align-items-center.w-100.mt-2
+                                h6.reviews-text.mb-0.me-3 +1%
+                                p.reviews-text.mb-0.ms-4 delivery
+                                a.btn.btn-secondary.btn-block(href='/produce/order/'+item._id) order
+                    else if item.status == "Approved" && item.productcategory == "Dairy" && item.availability == "booked"
+                        .products-thumb
+                            img.img-fluid.products-image.img(src="/"+item.productimage, alt="Image") 
+                            .products-info.d-flex.flex-wrap.align-items-center
+                            h4.mb-0 #{item.productname}
+                            span.price-tag.bg-white.shadow-lg.ms-4
+                                small Ugx
+                                | #{item.unitprice}
+                            .d-flex.flex-wrap.align-items-center.w-100.mt-2
+                                h6.reviews-text.mb-0.me-3 booked
+                                p.reviews-text.mb-0.ms-4 delivery
+                    else if item.status == "Approved" && item.productcategory == "Dairy" && item.availability == "N/A"
+                        .products-thumb
+                            img.img-fluid.products-image.img(src="/"+item.productimage, alt="Image" ) 
+                            .products-info.d-flex.flex-wrap.align-items-center
+                            h4.mb-0 #{item.productname}
+                            span.price-tag.bg-white.shadow-lg.ms-4
+                                small Ugx
+                                | #{item.unitprice}
+                            .d-flex.flex-wrap.align-items-center.w-100.mt-2
+                                h6.reviews-text.mb-0.me-3 N/A
+                                p.reviews-text.mb-0.ms-4 finished
+  section.products.section-padding
+    .container
+      .row
+        .col-12
+          h2.mb-lg-5.mb-4 Poultry Products
+        if goods.length
+            each item in goods
+                .col-lg-4.col-md-6.col-12
+                    if item.status == "Approved" && item.productcategory == "Poultry" && item.availability == "available"
+                        .products-thumb
+                            img.img-fluid.products-image.img(src="/"+item.productimage, alt="Image") 
+                            .products-info.d-flex.flex-wrap.align-items-center
+                            h4.mb-0 #{item.productname}
+                            span.price-tag.bg-white.shadow-lg.ms-4
+                                small Ugx
+                                | #{item.unitprice}
+                            .d-flex.flex-wrap.align-items-center.w-100.mt-2
+                                h6.reviews-text.mb-0.me-3 +1%
+                                p.reviews-text.mb-0.ms-4 delivery
+                                a.btn.btn-secondary.btn-block(href='/produce/order/'+item._id) order
+                    else if item.status == "Approved" && item.productcategory == "Poultry" && item.availability == "booked"
+                        .products-thumb
+                            img.img-fluid.products-image.img(src="/"+item.productimage, alt="Image") 
+                            .products-info.d-flex.flex-wrap.align-items-center
+                            h4.mb-0 #{item.productname}
+                            span.price-tag.bg-white.shadow-lg.ms-4
+                                small Ugx
+                                | #{item.unitprice}
+                            .d-flex.flex-wrap.align-items-center.w-100.mt-2
+                                h6.reviews-text.mb-0.me-3 booked
+                                p.reviews-text.mb-0.ms-4 delivery
+                    else if item.status == "Approved" && item.productcategory == "Poultry" && item.availability == "N/A"
+                        .products-thumb
+                            img.img-fluid.products-image.img(src="/"+item.productimage, alt="Image" ) 
+                            .products-info.d-flex.flex-wrap.align-items-center
+                            h4.mb-0 #{item.productname}
+                            span.price-tag.bg-white.shadow-lg.ms-4
+                                small Ugx
+                                | #{item.unitprice}
+                            .d-flex.flex-wrap.align-items-center.w-100.mt-2
+                                h6.reviews-text.mb-0.me-3 N/A
+                                p.reviews-text.mb-0.ms-4 finished

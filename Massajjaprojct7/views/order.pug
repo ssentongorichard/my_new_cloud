@@ -1,0 +1,55 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  meta(http-equiv='X-UA-Compatible', content='ie=edge')
+  title Login Page - Dashboard Admin Template
+  link(rel='stylesheet' href='css/login.css')
+  link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous")
+  style.
+    body {
+    background-color:brown;
+    }
+body
+  .col-sm-5.mx-auto.my-12
+    .card.text-center.bg-success
+      .card-header.d-inline-flex.mx-auto
+            form(method="GET" action='/login')
+              button.btn.btn-style.btn-light(type='none') Login
+            form(method="GET" action='/seelistedlist')
+              button.btn.btn-style.btn-dark(type='none') Cancel
+      .card-body
+        h5.card-title UFARM BOOKING FORM
+        form.tm-login-form(action='/produce/order/?id='+product._id name='productupdate' method='POST')
+          .form-group
+            label(for='productimage') #{product.productname}:  .
+            img.rounded(src="/"+product.productimage, alt="Image" width='150px' height="150px") 
+          .form-group
+            label(for='availability') About to be
+            select.rounded(name='availability')
+                option(value="booked" selected = product.availability === "booked") Booked
+          .form-group
+                label(for='')
+                    | Customeraddress:
+                    small  *
+                input#customeraddress.rounded(type='text' name='customeraddress' autocomplete='off' value=product.customeraddress)
+          .form-group
+            label(for='')
+                | Customeremail:
+                small  *
+            input#customeremail.rounded(type='text' name='customeremail' autocomplete='off' value=product.customeremail)
+          .form-group
+            button.btn.btn-dark.d-inline-block.mx-auto(type='submit') Order
+          .form-group
+            p
+              em press order to make booking
+      footer.row.tm-mt-big
+        .col-12.font-weight-light.text-center
+          p.d-inline-block.tm-bg-black.text-white.py-2.px-4
+            | &copy; Massajja Urban farmers initiative. All rights reserved
+      .card-footer.text-muted.mx-auto
+        | market at your door
+
+      
+      
+      

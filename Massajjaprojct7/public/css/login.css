@@ -1,0 +1,35 @@
+
+.bg {
+  background-image: url(/image/2.jpg);
+ background: linear-gradient(to bottom,  #000000b8, #000000b8), url('/image/2.jpg');
+ color: black;
+ background-repeat: no-repeat;
+ background-size: cover;
+background-attachment: fixed;
+height: 640px;
+}
+/* .bg03 {
+	background-image: url(../image/2.jpg);
+} */
+.tm-mt-big {
+  margin-top: 70px;
+}
+.tm-block {
+  padding: 50px 45px;
+}
+.tm-login-col {
+  max-width: 600px;
+}
+.tm-block {
+    padding: 30px;
+  }
+  .tm-site-icon {
+    font-size: 2em;
+  }
+  
+ .padding{
+  padding-top: 50px;
+ }
+
+ box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+

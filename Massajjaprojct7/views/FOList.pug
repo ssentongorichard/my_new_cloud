@@ -1,0 +1,41 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  title Non-Responsive Table
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet', href='css/table.css')
+  link(href='bootstrap/css/bootstrap.css', rel='stylesheet')
+#nav-tab.nav.nav-tabs(role='tablist')
+#page-wrap
+  h1 Farmer Ones List
+  div
+    form(method="GET" action='/registerfo')
+          button.btn.btn-primary.btn-block(type='submit') Add New Farmer One
+  table
+    tr
+        th Names
+        th Ward
+        th Phone Number
+        th Adress
+        th activity
+        th Changes
+    tbody 
+        if farmerones.length
+            each farmerone in farmerones
+                    tr.tds 
+                        td #{farmerone.names}
+                        td #{farmerone.ward}
+                        td #{farmerone.phone}
+                        td #{farmerone.address}
+                        td #{farmerone.activity}
+                        td
+                            a.btn.btn-success.btn-block(href='/farmerOne/update/'+farmerone._id) Update
+                            form(method="post" action='/farmerOne/delete')
+                                input(type="hidden" placeholder="" name="id", value=farmerone._id)
+                                button.btn.btn-danger.btn-block(type="submit") Delete
+        div.form-row
+            div.col.form-group
+                a(class='button' href='/dashboardao') Back
+
+block footer
+    div.col-md-12 ©️ 2022 UFARM Masajja Tukolerewamu Incorporated

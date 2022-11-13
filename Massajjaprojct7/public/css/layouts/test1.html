@@ -1,0 +1,662 @@
+<html class="no-js desktop" lang="en-UG"><head>
+    <script type="text/javascript" src="https://bam.nr-data.net/1/2e0dde5d40?a=97172041&amp;v=1216.487a282&amp;to=Z1RTbUoECEBWARJeC14eckxLEQleGAQJWABAUF9dWUsVW1gSSEQNRFQfWlcLEkFYDgpSFh5ZXlRdXw5cWgcnVBBZXl8%3D&amp;rst=33942&amp;ck=1&amp;ref=https://food.jumia.ug/&amp;qt=1&amp;ap=103&amp;be=4951&amp;fe=28708&amp;dc=5907&amp;perf=%7B%22timing%22:%7B%22of%22:1665399998702,%22n%22:0,%22f%22:11,%22dn%22:277,%22dne%22:277,%22c%22:277,%22s%22:3012,%22ce%22:3131,%22rq%22:3131,%22rp%22:4915,%22rpe%22:4930,%22dl%22:4927,%22di%22:5689,%22ds%22:5908,%22de%22:5908,%22dc%22:28708,%22l%22:28708,%22le%22:28722%7D,%22navigation%22:%7B%7D%7D&amp;fp=5270&amp;fcp=5270&amp;at=SxNQGwIeG04%3D&amp;jsonp=NREUM.setToken"></script><script src="https://js-agent.newrelic.com/nr-1216.min.js"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/plugins/ua/linkid.js"></script><script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script><script type="text/javascript" async="" src="https://www.googleadservices.com/pagead/conversion_async.js"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-T3KQC9"></script><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"2e0dde5d40",applicationID:"97172041"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+                
+            <title>Jumia Food Uganda | Food, Drinks, everything you need | Order Online</title>
+    
+            <meta name="description" content="Order online Food, drinks and everything you need near you. Try it Now! ✔ Burger, Pizzas, Ugandian Food, Drinks, Groceries,etc ✔ Simple, Fast and Pay cash on delivery ✔ Download Jumia Food App.">
+    
+            <meta name="keywords" content="food, delivery, kampala">
+    
+            <meta name="robots" content="index,follow">
+    
+                        <meta name="format-detection" content="telephone=no">
+                                <meta name="mobile-web-app-capable" content="yes">
+                                <meta name="apple-mobile-web-app-capable" content="yes">
+                                <meta name="apple-mobile-web-app-status-bar-style" content="black">
+                                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                                <meta name="revisit-after" content="3 days">
+                                <meta name="msapplication-tilecolor" content="#da532c">
+                                <meta name="msapplication-tileimage" content="//africa-public.food.jumia.com/assets/production/ug/layout/themes/capricciosa_hellofood/images/en/mstile-144x144.png?v=1665383617">
+                                <meta name="msapplication-config" content="/browserconfig.xml">
+            
+            <link rel="alternate" href="android-app://com.jumiafood.android/foodpanda/?c=ug&amp;utm_source=google&amp;utm_medium=search&amp;utm_campaign=https%3A%2F%2Ffood.jumia.ug%2F&amp;utm_content=food.jumia.ug&amp;adjust_tracker=wqdu8i&amp;adjust_campaign=search&amp;adjust_adgroup=https%3A%2F%2Ffood.jumia.ug%2F&amp;adjust_creative=">
+            <link rel="alternate" href="ios-app://1113993339/foodpanda/?c=ug&amp;utm_source=google&amp;utm_medium=search&amp;utm_campaign=https%3A%2F%2Ffood.jumia.ug%2F&amp;utm_content=food.jumia.ug&amp;adjust_tracker=qy87hh&amp;adjust_campaign=search&amp;adjust_adgroup=https%3A%2F%2Ffood.jumia.ug%2F&amp;adjust_creative=">
+            <link rel="apple-touch-icon" href="//africa-public.food.jumia.com/assets/production/ug/layout/themes/capricciosa_hellofood/images/en/apple-touch-icon-57x57.png?v=1665383617" sizes="57x57">
+            <link rel="apple-touch-icon" href="//africa-public.food.jumia.com/assets/production/ug/layout/themes/capricciosa_hellofood/images/en/apple-touch-icon-60x60.png?v=1665383617" sizes="60x60">
+            <link rel="apple-touch-icon" href="//africa-public.food.jumia.com/assets/production/ug/layout/themes/capricciosa_hellofood/images/en/apple-touch-icon-72x72.png?v=1665383617" sizes="72x72">
+            <link rel="apple-touch-icon" href="//africa-public.food.jumia.com/assets/production/ug/layout/themes/capricciosa_hellofood/images/en/apple-touch-icon-76x76.png?v=1665383617" sizes="76x76">
+            <link rel="apple-touch-icon" href="//africa-public.food.jumia.com/assets/production/ug/layout/themes/capricciosa_hellofood/images/en/apple-touch-icon-114x114.png?v=1665383617" sizes="114x114">
+            <link rel="apple-touch-icon" href="//africa-public.food.jumia.com/assets/production/ug/layout/themes/capricciosa_hellofood/images/en/apple-touch-icon-120x120.png?v=1665383617" sizes="120x120">
+            <link rel="apple-touch-icon" href="//africa-public.food.jumia.com/assets/production/ug/layout/themes/capricciosa_hellofood/images/en/apple-touch-icon-144x144.png?v=1665383617" sizes="144x144">
+            <link rel="apple-touch-icon" href="//africa-public.food.jumia.com/assets/production/ug/layout/themes/capricciosa_hellofood/images/en/apple-touch-icon-152x152.png?v=1665383617" sizes="152x152">
+            <link rel="apple-touch-icon" href="//africa-public.food.jumia.com/assets/production/ug/layout/themes/capricciosa_hellofood/images/en/apple-touch-icon-180x180.png?v=1665383617" sizes="180x180">
+            <link rel="apple-touch-icon-precomposed" href="//africa-public.food.jumia.com/assets/production/ug/layout/themes/capricciosa_hellofood/images/en/apple-touch-icon-precomposed.png?v=1665383617">
+            <link rel="icon" href="//africa-public.food.jumia.com/assets/production/ug/layout/themes/capricciosa_hellofood/images/en/favicon-32x32.png?v=1665383617" sizes="32x32">
+            <link rel="icon" href="//africa-public.food.jumia.com/assets/production/ug/layout/themes/capricciosa_hellofood/images/en/favicon-192x192.png?v=1665383617" sizes="192x192">
+            <link rel="icon" href="//africa-public.food.jumia.com/assets/production/ug/layout/themes/capricciosa_hellofood/images/en/favicon-96x96.png?v=1665383617" sizes="96x96">
+            <link rel="icon" href="//africa-public.food.jumia.com/assets/production/ug/layout/themes/capricciosa_hellofood/images/en/favicon-16x16.png?v=1665383617" sizes="16x16">
+            <link rel="manifest" href="/manifest.json">
+            <link rel="shortcut icon" href="//africa-public.food.jumia.com/assets/production/ug/layout/themes/capricciosa_hellofood/images/en/favicon.ico?v=1665383617">
+            <link rel="mask-icon" href="//africa-public.food.jumia.com/assets/production/ug/layout/themes/capricciosa_hellofood/images/en/safari-pinned-tab.svg?v=1665383617" color="#f68b1e">
+            <link rel="alternate" href="https://food.jumia.ma/" hreflang="fr">
+            <link rel="alternate" href="https://food.jumia.ma/ar/" hreflang="ar">
+            <link rel="alternate" href="https://food.jumia.com.tn/" hreflang="fr-TN">
+            <link rel="alternate" href="https://food.jumia.com.tn/ar/" hreflang="ar-TN">
+            <link rel="alternate" href="https://food.jumia.ci/" hreflang="fr-CI">
+            <link rel="alternate" href="https://food.jumia.ci/en/" hreflang="en-CI">
+            <link rel="alternate" href="https://food.jumia.sn/" hreflang="fr-SN">
+            <link rel="alternate" href="https://food.jumia.sn/en/" hreflang="en-SN">
+            <link rel="alternate" href="https://food.jumia.rw/" hreflang="en-RW">
+            <link rel="alternate" href="https://food.jumia.rw/fr/" hreflang="fr-RW">
+            <link rel="alternate" href="https://food.jumia.rw/rw/" hreflang="rw">
+            <link rel="alternate" href="https://food.jumia.dz/" hreflang="fr-DZ">
+            <link rel="alternate" href="https://food.jumia.com.ng/" hreflang="en">
+            <link rel="alternate" href="https://food.jumia.co.ke/" hreflang="en-KE">
+            <link rel="alternate" href="https://food.jumia.com.gh/" hreflang="en-GH">
+            <link rel="alternate" href="https://food.jumia.ug/" hreflang="en-UG">
+            <link rel="alternate" href="https://food.jumia.co.tz/" hreflang="en-TZ">
+    
+                        <meta content="https://food.jumia.ug/" property="og:url">
+                                <meta content="Jumia Food" property="og:site_name">
+                      <link rel="stylesheet" href="https://africa-public.food.jumia.com/cdn/production/shop-new/css/styles-5c59f24d.css" media="all">
+  <link rel="stylesheet" href="https://africa-public.food.jumia.com/cdn/production/font-awesome/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Muli:400,700" rel="stylesheet">
+                
+        
+    
+    
+    
+        
+    <script type="text/javascript">
+        window.API_BASE_URL = 'https://api.food.jumia.ug/api/v6';
+        window.CURRENCY_INFO = {"symbol":"USh","position":"right","decimals":0,"decimal_sep":".","thousands_sep":",","symbol_spaces":0,"currency_symbol_iso":"UGX"};
+        window.SMART_WEBVIEW_PREFIX = '';
+        window.HTTP_HOST_SCHEMA = 'https://food.jumia.ug';
+        window.GOOGLE_ADS_NETWORK_CODE = '21834541202';
+        window.POPUPS_ENABLED = 1;
+        window.GEOLOCATION_ENABLED = 1;
+        window.CACHEBUSTER_SUFFIX = '1596116892';
+
+                                window.BRAND_NAME = 'jumiafood';
+            window.LIST_PATH = '/restaurants'
+            window.DETAIL_PATH = '/restaurant'
+            window.IS_WHITELABEL = false;
+        
+    </script>
+
+    
+                    
+    
+    <script>
+        var dataLayer = [{"area_id":"NA","area_name":"NA","city_id":"NA","city_name":"NA","lat":"NA","lng":"NA","country_id":"UG","app_version":"production|master|06826fcjf","ga_code":"UA-00000000-0","ga_domain":"food.jumia.ug","language":"en_UG","visitor_id":"7c57033988c54126e69d529339992c1c","landing_page":"\/","visitor_utm_source":"","visitor_utm_campaign":"","visitor_utm_content":"","visitor_utm_medium":"","visitor_utm_term":"","visitor_referer":"Google_SEO","visitor_source":"https:\/\/www.google.com\/","ab_group":"b","platform":"pc","currency":"UGX","page_type":"Homepage","newsletter_id":null,"source":"frontend","brand":"jumiafood","customer_logged":0,"customer_id":"","customer_status":"NA","customer_control":0,"customer_lastname":"","customer_name":"","customer_email":"","customer_vendor_id_list":"","customer_last_date":"NA","customer_first_date":"NA","customer_acquisition_voucher":"false"}];
+
+        window.$trackingConfig = {
+            gtmActive: 1,
+            gaActive: 1
+        };
+
+    </script>
+
+            <!-- Google Tag Manager -->
+        <script>
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-T3KQC9');
+        </script>
+        <!-- End Google Tag Manager -->
+                <script async="" type="text/javascript" src="https://www.googletagservices.com/tag/js/gpt.js"></script><style type="text/css">.ps{-ms-touch-action:auto;touch-action:auto;overflow:hidden!important;-ms-overflow-style:none}@supports (-ms-overflow-style:none){.ps{overflow:auto!important}}@media (-ms-high-contrast:none),screen and (-ms-high-contrast:active){.ps{overflow:auto!important}}.ps.ps--active-x>.ps__scrollbar-x-rail,.ps.ps--active-y>.ps__scrollbar-y-rail{display:block;background-color:transparent}.ps.ps--in-scrolling.ps--x>.ps__scrollbar-x-rail{background-color:#eee;opacity:.9}.ps.ps--in-scrolling.ps--x>.ps__scrollbar-x-rail>.ps__scrollbar-x{background-color:#999;height:11px}.ps.ps--in-scrolling.ps--y>.ps__scrollbar-y-rail{background-color:#eee;opacity:.9}.ps.ps--in-scrolling.ps--y>.ps__scrollbar-y-rail>.ps__scrollbar-y{background-color:#999;width:11px}.ps>.ps__scrollbar-x-rail{display:none;position:absolute;opacity:0;transition:background-color .2s linear,opacity .2s linear;bottom:0;height:15px}.ps>.ps__scrollbar-x-rail>.ps__scrollbar-x{position:absolute;background-color:#aaa;border-radius:6px;transition:background-color .2s linear,height .2s linear,width .2s ease-in-out,border-radius .2s ease-in-out;bottom:2px;height:6px}.ps>.ps__scrollbar-x-rail:active>.ps__scrollbar-x,.ps>.ps__scrollbar-x-rail:hover>.ps__scrollbar-x{height:11px}.ps>.ps__scrollbar-y-rail{display:none;position:absolute;opacity:0;transition:background-color .2s linear,opacity .2s linear;right:0;width:15px}.ps>.ps__scrollbar-y-rail>.ps__scrollbar-y{position:absolute;background-color:#aaa;border-radius:6px;transition:background-color .2s linear,height .2s linear,width .2s ease-in-out,border-radius .2s ease-in-out;right:2px;width:6px}.ps>.ps__scrollbar-y-rail:active>.ps__scrollbar-y,.ps>.ps__scrollbar-y-rail:hover>.ps__scrollbar-y{width:11px}.ps:hover.ps--in-scrolling.ps--x>.ps__scrollbar-x-rail{background-color:#eee;opacity:.9}.ps:hover.ps--in-scrolling.ps--x>.ps__scrollbar-x-rail>.ps__scrollbar-x{background-color:#999;height:11px}.ps:hover.ps--in-scrolling.ps--y>.ps__scrollbar-y-rail{background-color:#eee;opacity:.9}.ps:hover.ps--in-scrolling.ps--y>.ps__scrollbar-y-rail>.ps__scrollbar-y{background-color:#999;width:11px}.ps:hover>.ps__scrollbar-x-rail,.ps:hover>.ps__scrollbar-y-rail{opacity:.6}.ps:hover>.ps__scrollbar-x-rail:hover{background-color:#eee;opacity:.9}.ps:hover>.ps__scrollbar-x-rail:hover>.ps__scrollbar-x{background-color:#999}.ps:hover>.ps__scrollbar-y-rail:hover{background-color:#eee;opacity:.9}.ps:hover>.ps__scrollbar-y-rail:hover>.ps__scrollbar-y{background-color:#999}.ps-container{position:relative}</style><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/49/12/common.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/49/12/util.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/49/12/geocoder.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/49/12/controls.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/49/12/places_impl.js"></script><meta http-equiv="origin-trial" content="A7bG5hJ4XpMV5a3V1wwAR0PalkFSxLOZeL9D/YBYdupYUIgUgGhfVJ1zBFOqGybb7gRhswfJ+AmO7S2rNK2IOwkAAAB7eyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjY5NzY2Mzk5LCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A+cA2PUOfIOKAdSDJOW5CP9ZlxONy1yu+hqAq72zUtKw4rLdihqRp6Nui/jUyCyegr+BUtH+C+Elv0ufn05yBQEAAACFeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjY5NzY2Mzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A+zsdH3aNZT/bkjT8U/o5ACzyaeNYzTvtoVmwf/KOilfv39pxY2AIsOwhQJv+YnXp98i3TqrQibIVtMWs5UHjgoAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjY5NzY2Mzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="AxceVEhIegcDEHqLXFQ2+vPKqzCppoJYsRCZ/BdfVnbM/sUUF2BXV8lwNosyYjvoxnTh2FC8cOlAnA5uULr/zAUAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjY5NzY2Mzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><script src="https://securepubads.g.doubleclick.net/gpt/pubads_impl_2022100601.js?cb=31070224" async=""></script><script type="text/javascript" async="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/616668767/?random=1665400007343&amp;cv=9&amp;fst=1665400007343&amp;num=1&amp;bg=ffffff&amp;guid=ON&amp;resp=GooglemKTybQhCsO&amp;u_h=768&amp;u_w=1366&amp;u_ah=728&amp;u_aw=1366&amp;u_cd=24&amp;u_his=3&amp;u_tz=180&amp;u_java=false&amp;u_nplug=5&amp;u_nmime=2&amp;gtm=2wga50&amp;sendb=1&amp;ig=1&amp;data=dynx_city%3DNA%3Bdynx_pagetype%3DHomepage%3Becomm_pagetype%3DHomepage&amp;frm=0&amp;url=https%3A%2F%2Ffood.jumia.ug%2F&amp;ref=https%3A%2F%2Fwww.google.com%2F&amp;tiba=Jumia%20Food%20Uganda%20%7C%20Food%2C%20Drinks%2C%20everything%20you%20need%20%7C%20Order%20Online&amp;auid=392228107.1663510338&amp;hn=www.googleadservices.com&amp;async=1&amp;rfmt=3&amp;fmt=4"></script><link rel="preload" href="https://adservice.google.com/adsid/integrator.js?domain=food.jumia.ug" as="script"><script type="text/javascript" src="https://adservice.google.com/adsid/integrator.js?domain=food.jumia.ug"></script><link href="https://service.force.com/embeddedservice/5.0/esw.min.css" type="text/css" rel="stylesheet"><style id="inert-style">
+[inert] {
+	pointer-events: none;
+	cursor: default;
+}
+
+[inert], [inert] * {
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+</style></head>
+<body class="  no-foodpanda ug ">
+                                    <noscript>
+        <iframe
+            src="//www.googletagmanager.com/ns.html?id=GTM-T3KQC9"
+            height="0"
+            width="0"
+            style="display:none;visibility:hidden"
+        ></iframe>
+    </noscript>
+            <section id="jf">
+        <div id="header-promo-container">            <div class="food_header_bar_container">                <style type="text/css">                    #food_header_bar {                        background-color:#ff9900;                        text-align:center;                        font-size: 20px;                        padding:20px 20px 15px;                        color:#FFF;                        font-family: Arial, Helvetica, sans-serif;                    }                    span#food_header_bar_button a {                        background-color: #ffffff;                        padding:5px 10px;                        text-decoration:none;                        color:#000000;                        margin-left:20px;                        transition: background-color 0.4s, transform 0.4s;                    }                    span#food_header_bar_button a:hover {                        background-color: #000000;                        color:#ffffff;                    }                </style>                <div id="food_header_bar" data-id="header_promo_id_test" data-title="header_promo_title_test" data-position="header">                    <span style="display:inline-block; margin-bottom:10px;margin-top:0px">                   Call: <span style="color: #ffffff;"><a style="color: #ffffff;" href="tel:0312308200">0312308200</a></span>📞 to order. </span>                                                      </div>            </div>        </div>
+                      
+
+  <nav id="jf-navbar" class="navbar is-transparent header-navbar sticky has-shadow">
+    <div class="container">
+      <div class="navbar-brand">
+        <div class="navbar-burger burger" data-target="header-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <a class="navbar-item" href="/">
+            <img alt="Logo" class="is-hidden-touch" src="//africa-public.food.jumia.com/assets/production/ug/layout/themes/capricciosa_hellofood/images/en/jumiafood-logo.png?v=1665383617">
+        <img class="is-hidden-desktop" src="/images/jumia-food-mobile.svg?v=1596116892" alt="Logo">
+    </a>
+      </div>
+      <div id="header-menu" class="navbar-menu has-text-centered-touch">
+        <div class="navbar-end mhl-mobile">
+                                                <a class="navbar-item mhxs is-hidden-desktop" href="https://pay.jumia.ug/services/jumia-prime" target="_blank">
+    <div class="dir-row fvh-ctr">
+      <img class="icon-w-16 mrs" src="/images/prime-icon.svg?v=1596116892">
+      <span class="is-uppercase">Jumia Prime</span>
+    </div>
+  </a>
+                                          
+                      <a class="navbar-item mhxs is-hidden-desktop" href="/restaurants">
+    <div class="dir-col is-inline-block-touch">
+        <span class="is-uppercase">Vendors</span>
+    </div>
+</a>
+                      <a class="navbar-item mhxs" href="/contents/contact.htm">
+    <div class="dir-col is-inline-block-touch">
+        <span class="is-uppercase">Help</span>
+    </div>
+</a>
+                                              <div class="navbar-item">
+                <a class="button is-primary is-small is-size-5 is-fullwidth-touch has-text-weight-bold is-uppercase" id="myJumiaLogin" data-card-class="small">
+                    Login / Sign Up
+                </a>
+            </div>
+                    </div>
+      </div>
+    </div>
+  </nav>
+                            <main class="home">
+                    
+                                                                                    
+    
+<section class="services-area">
+    <div class="columns mhn phm-touch">
+        <div class="column phn is-3-fullhd is-2-desktop is-hidden-touch">
+                            <img src="//africa-public.food.jumia.com/assets/production/ug/layout/themes/capricciosa_hellofood/images/en/jumiafood-homepage-left-splash-services.jpg?v=1665383617">
+                    </div>
+
+        <div class="column phn-touch phm-desktop is-6-fullhd is-8-desktop is-12-touch mt-crazy-large mtxxl-touch">
+            <h1 class="title mbs-desktop mbl-touch is-1 is-size-2-mobile has-text-centered-desktop has-text-left-touch">Everything you need, delivered now</h1>
+
+    <h2 class="title is-4 is-size-3-mobile is-hidden-touch has-text-centered-desktop has-text-left-touch"> </h2>
+                        
+<script>
+    window.noProductPicPlaceholder = "\/\/africa-public.food.jumia.com\/assets\/production\/ug\/layout\/themes\/capricciosa_hellofood\/images\/en\/no_pic_logo.png?v=1665383617"
+</script>
+
+<div class="services-wrapper" style=""><h3 class="services-wrapper-title mbm fl-wrap fv-ctr"><img src="/images/icon-location-on-map-no-shadow.svg?v=1596116892"> <span class="mlxs fsh-0">Delivering to</span> <span class="mlxs has-text-primary cursor-point" style="display: none;"><span>
+          
+        </span> <i aria-hidden="true" class="fa fa-chevron-down"></i></span></h3> <div class="search-city-area geolocation"><div class="close-popup"><i class="delete"></i></div> <div id="geo-content"><p><img src="/images/icon-location-on-map-no-shadow.svg?v=1596116892" alt="icon-location-on-map"> <span class="mls fsh-0 has-text-weight-bold">
+        Delivering to
+      </span></p> <div id="geo-input-wrapper"><input placeholder="Enter your delivery address" autocomplete="off" name="shop_checkout_type[orderMetaData][customerAddress][addressLine1]" onkeydown="return event.key !== 'Enter'" class="input"> <i class="delete" style="display: none;"></i></div> <div id="geo-dropdown" style="display: none;"><!---->  <div class="geo-option"><img src="/images/icon-map.svg?v=1596116892" alt="icon-map"> <span class="pls">
+          Choose on map
+        </span></div></div></div></div> <div class="mtl-desktop mtm-touch service-card-list is-hidden-touch"><h3 class="services-wrapper-title mbm">Choose a service</h3> <div class="dir-row columns is-multiline fh-ctr"><div class="column is-12-mobile is-6-tablet disabled is-3-desktop"><div class="loading-placeholder"><div class="simple-card disabled"><img class="card-image" data-src="https://d2lev5xroqke9e.cloudfront.net/ug/view/390a424cc6?width=168&amp;height=168" src="https://d2lev5xroqke9e.cloudfront.net/ug/view/390a424cc6?width=168&amp;height=168" lazy="loaded"> <p class="card-title">
+    Jumia Food Mart
+  </p> <p class="card-description">
+    Everyday essentials delivered in 20 minutes + Free delivery
+  </p></div></div></div><div class="column is-12-mobile is-6-tablet disabled is-3-desktop"><div class="loading-placeholder"><div class="simple-card disabled"><img class="card-image" data-src="https://d2lev5xroqke9e.cloudfront.net/ug/view/5897c634f3?width=168&amp;height=168" src="https://d2lev5xroqke9e.cloudfront.net/ug/view/5897c634f3?width=168&amp;height=168" lazy="loaded"> <p class="card-title">
+    Restaurants
+  </p> <p class="card-description">
+    All the food you love, from restaurants near you
+  </p></div></div></div><div class="column is-12-mobile is-6-tablet disabled is-3-desktop"><div class="loading-placeholder"><div class="simple-card disabled"><img class="card-image" data-src="https://d2lev5xroqke9e.cloudfront.net/ug/view/96b9c06be0?width=168&amp;height=168" src="https://d2lev5xroqke9e.cloudfront.net/ug/view/96b9c06be0?width=168&amp;height=168" lazy="loaded"> <p class="card-title">
+    October Deals
+  </p> <p class="card-description">
+    Up to 50% OFF
+  </p></div></div></div><div class="column is-12-mobile is-6-tablet disabled is-3-desktop"><div class="loading-placeholder"><div class="simple-card disabled"><img class="card-image" data-src="https://d2lev5xroqke9e.cloudfront.net/ug/view/8f2adf001a?width=168&amp;height=168" src="https://d2lev5xroqke9e.cloudfront.net/ug/view/8f2adf001a?width=168&amp;height=168" lazy="loaded"> <p class="card-title">
+    Event Tickets
+  </p> <p class="card-description">
+    Tickets for events near you
+  </p></div></div></div></div><div class="dir-row columns is-multiline fh-ctr"><div class="column is-12-mobile is-6-tablet disabled is-3-desktop"><div class="loading-placeholder"><div class="simple-card disabled"><img class="card-image" data-src="https://d2lev5xroqke9e.cloudfront.net/ug/view/c8a2037955?width=168&amp;height=168" src="https://d2lev5xroqke9e.cloudfront.net/ug/view/c8a2037955?width=168&amp;height=168" lazy="loaded"> <p class="card-title">
+    Alcohol delivery
+  </p> <p class="card-description">
+    Amazing assortment of Alcoholic products
+  </p></div></div></div><div class="column is-12-mobile is-6-tablet disabled is-3-desktop"><div class="loading-placeholder"><div class="simple-card disabled"><img class="card-image" data-src="https://d2lev5xroqke9e.cloudfront.net/ug/view/f8717b6cf6?width=168&amp;height=168" src="https://d2lev5xroqke9e.cloudfront.net/ug/view/f8717b6cf6?width=168&amp;height=168" lazy="loaded"> <p class="card-title">
+    KFC
+  </p> <p class="card-description">
+    KFC delivered  in minutes
+  </p></div></div></div><div class="column is-12-mobile is-6-tablet disabled is-3-desktop"><div class="loading-placeholder"><div class="simple-card disabled"><img class="card-image" data-src="https://d2lev5xroqke9e.cloudfront.net/ug/view/4ee08cc221?width=168&amp;height=168" src="https://d2lev5xroqke9e.cloudfront.net/ug/view/4ee08cc221?width=168&amp;height=168" lazy="loaded"> <p class="card-title">
+    Supermarket
+  </p> <p class="card-description">
+    Fresh groceries and everyday essentials
+  </p></div></div></div><div class="column is-12-mobile is-6-tablet disabled is-3-desktop"><div class="loading-placeholder"><div class="simple-card disabled"><img class="card-image" data-src="https://d2lev5xroqke9e.cloudfront.net/ug/view/7cef294948?width=168&amp;height=168" src="https://d2lev5xroqke9e.cloudfront.net/ug/view/7cef294948?width=168&amp;height=168" lazy="loaded"> <p class="card-title">
+    Pharmacy and Lab
+  </p> <p class="card-description">
+    Medication and personal care delivered in minutes
+  </p></div></div></div></div><div class="dir-row columns is-multiline fh-ctr"><div class="column is-12-mobile is-6-tablet disabled is-3-desktop"><div class="loading-placeholder"><div class="simple-card disabled"><img class="card-image" data-src="https://d2lev5xroqke9e.cloudfront.net/ug/view/461816da3c?width=168&amp;height=168" src="https://d2lev5xroqke9e.cloudfront.net/ug/view/461816da3c?width=168&amp;height=168" lazy="loaded"> <p class="card-title">
+    Shops
+  </p> <p class="card-description">
+    Gifts, home essentials and more delivered in minutes
+  </p></div></div></div><div class="column is-12-mobile is-6-tablet disabled is-3-desktop"><div class="loading-placeholder"><div class="simple-card disabled"><img class="card-image" data-src="https://d2lev5xroqke9e.cloudfront.net/ug/view/0ed1b2abd0?width=168&amp;height=168" src="https://d2lev5xroqke9e.cloudfront.net/ug/view/0ed1b2abd0?width=168&amp;height=168" lazy="loaded"> <p class="card-title">
+    Water
+  </p> <p class="card-description">
+    Water delivered  in minutes
+  </p></div></div></div><div class="column is-12-mobile is-6-tablet disabled is-3-desktop"><div class="loading-placeholder"><div class="simple-card disabled"><img class="card-image" data-src="https://d2lev5xroqke9e.cloudfront.net/ug/view/9cc2f2968b?width=168&amp;height=168" src="https://d2lev5xroqke9e.cloudfront.net/ug/view/9cc2f2968b?width=168&amp;height=168" lazy="loaded"> <p class="card-title">
+    Gas
+  </p> <p class="card-description">
+    Gas delivered to  you in minutes
+  </p></div></div></div><div class="column is-12-mobile is-6-tablet disabled is-3-desktop"><div class="loading-placeholder"><div class="simple-card disabled"><img class="card-image" data-src="https://d2lev5xroqke9e.cloudfront.net/ug/view/a67897f33a?width=168&amp;height=168" src="https://d2lev5xroqke9e.cloudfront.net/ug/view/a67897f33a?width=168&amp;height=168" lazy="loaded"> <p class="card-title">
+    New on Jumia Food
+  </p> <p class="card-description">
+    Deals up to 50%
+  </p></div></div></div></div></div> <!----> <!----></div>
+
+    <script defer="" src="https://maps.googleapis.com/maps/api/js?region=ug&amp;client=gme-silveroakinternet&amp;channel=food&amp;signature=5GYHuivRI7erdTfLb_EHCQx8aZw%3D&amp;libraries=places%2Cgeometry">
+        <!-- -->
+    </script>
+
+
+
+        </div>
+
+        <div class="column phn is-3-fullhd is-2-desktop is-hidden-touch">
+                            <img class="is-block mla" src="//africa-public.food.jumia.com/assets/production/ug/layout/themes/capricciosa_hellofood/images/en/jumiafood-homepage-right-splash-services.jpg?v=1665383617">
+                    </div>
+    </div>
+</section>
+
+    <div class="has-text-centered mbl"><div class="is-hidden-mobile"><div id="xmjac" data-google-query-id="CNH3-b7C1foCFYdJHQkdUGgLUw" style="display: none;"><div id="google_ads_iframe_/21834541202/Jumia_food_home_page_desktop_0__container__" style="border: 0pt none; width: 970px; height: 0px;"></div></div></div> <div class="is-hidden-tablet" style=""><div id="eannl" data-google-query-id="CO-a-77C1foCFalDHQkdNmQE7g" style="display: none;"><div id="google_ads_iframe_/21834541202/Jumia_food_home_page_mobile_0__container__" style="border: 0pt none; width: 320px; height: 0px;"></div></div></div></div>
+
+    <section class="section how-it-works is-hidden-touch ptn">
+        <div class="container has-text-centered">
+            <h1 class="title is-1">How it Works</h1>
+            <div class="columns is-centered">
+                <div class="column has-text-centered">
+                    <img src="/images/how-it-works-1.svg?v=1596116892">
+                    <h3 class="title mvs is-size-3">Set delivery location</h3>
+                    <p class="">Select the location where you want us to deliver</p>
+                </div>
+                <div class="column">
+                    <img src="/images/how-it-works-2.svg?v=1596116892">
+                    <h3 class="title mvs is-size-3">Choose the product</h3>
+                    <p>Browse shops that deliver near you</p>
+                </div>
+                <div class="column">
+                    <img src="/images/how-it-works-3.svg?v=1596116892">
+                    <h3 class="title mvs is-size-3">Receive it at your doorstep</h3>
+                    <p>Your order will be delivered to you in no time</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    
+    
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "url": "https://food.jumia.ug/",
+    "name" : "Jumia Food",
+    "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://food.jumia.ug/restaurants?user_search={search_term_string}",
+        "query-input": "required name=search_term_string"
+    }
+}
+</script>
+
+<script type="application/ld+json">
+{
+    "@context" : "http://schema.org",
+    "@type" : "Organization",
+    "name" : "Jumia Food",
+    "url": "https://food.jumia.ug/",
+    "logo": "https://africa-public.food.jumia.com/assets/production/ug/layout/themes/capricciosa_hellofood/images/en/logo.png?v=1665383617"
+}
+</script>
+
+    
+            <section class="section subscribe-newsletter bg-or is-fullwidth mtl zi-1">
+        <div class="container">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-7">
+                                            <h1 class="title is-1 is-size-4-mobile has-text-white mbn">Subscribe to our newsletter today!</h1>
+                        <div class="has-text-white is-hidden-touch">
+                            Don't miss out on our great offers &amp; Receive deals from all our top vendors via e-mail
+                        </div>
+                        <form action="/newsletter/subscribe" method="post">
+                            <div class="field is-horizontal">
+                                <div class="field-body fl-wrap mtl">
+                                    <input type="hidden" id="newsletter_subscribe__token" name="newsletter_subscribe[_token]" value="skmQAiSoxdts9ly4Rve8ZPcoXZTl8S3GE9LD3oRW2lo">
+                                    <div class="field nl-city">
+                                        <div class="control">
+                                            <div class="select is-fullwidth error-validation set-icon">
+                                                
+                                                <select id="newsletter_subscribe_city" name="newsletter_subscribe[city]" required="required" class="is-large mvxs" data-prefill="location.cityId"><option value="" selected="selected">Select your city</option><optgroup label="Popular Cities">
+                <option value="2307632">Kampala</option></optgroup><optgroup label="More Cities">
+                <option value="2307582">Entebbe</option></optgroup></select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="field nl-mail">
+                                        <div class="control is-expanded error-validation set-icon">
+                                            
+                                            <input type="email" id="newsletter_subscribe_email" name="newsletter_subscribe[email]" required="required" class="input is-large mvxs" placeholder="E-mail" data-prefill="customer.email">
+                                        </div>
+                                    </div>
+                                    <div class="field nl-submit">
+                                        <button class="button is-dark has-text-white mvxs is-fullwidth is-large" type="submit">SUBSCRIBE NEWSLETTER</button>
+                                    </div>
+                                                                            <div class="field is-size-5 has-text-left-mobile mvm nl-terms">
+                                            <div>
+                                                <span>
+                                                    <input type="checkbox" id="newsletter_subscribe_termsAndConditionsAccepted" name="newsletter_subscribe[termsAndConditionsAccepted]" required="required" class="jf-cb" value="1">
+                                                    <label class="has-text-white is-size-5 is-inline-flex required" for="newsletter_subscribe_termsAndConditionsAccepted">I have read and accepted the</label>
+                                                </span>
+                                                <a class="has-text-white" href="/contents/terms-and-conditions.htm" target="_blank">Terms and conditions</a>
+                                                <span class="has-text-white">and the</span>
+                                                <a class="has-text-white" href="/contents/privacy.htm" target="_blank">Privacy policy</a>
+                                            </div>
+                                            <div class="error-validation">
+                                                
+                                            </div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                        </form>
+
+                                    </div>
+            </div>
+        </div>
+    </section>
+
+
+                    <section class="section home-promotions is-hidden-touch">
+            <div class="container">
+                <div class="columns">
+                    <div class="column has-text-centered">
+                        <ul>
+	<li class="small">
+		<a href="https://food.jumia.ug/restaurant/u5mp/meza-sharwama-kansanga"><img alt="" height="" src="https://ug.jumia.is/cms/rsz_ug_wk_39_tb_s_food_festartboard_4_copy_8jhgfdcxsharwarma-(1).png" "=""></a></li>
+	<li class="small">
+		<a href="https://food.jumia.ug/restaurant/u2ie/uga-roll"><img alt="" height="" src="https://ug.jumia.is/cms/rsz_ug_wk_39_tb_s_food_festartboard_4_copy_5iuytgfdxugaroll-(1).png" "=""></a></li>
+	<li class="small">
+		<a href="https://food.jumia.ug/restaurant/u7ma/kfc-bugolobi"><img alt="" height="" src="https://ug.jumia.is/cms/rsz_ug_wk_39_tb_s_food_festartboard_4_copy_7rtfyghujikstreetwise5-(1).png" "=""></a></li>
+</ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+    <section class="section get-started-corporate is-fullwidth zi-1">
+    <div class="container has-text-centered">
+        <div class="corporate-img is-hidden-touch">
+            <img class="img" src="/images/jumia-for-corporate.jpg">
+        </div>
+        <div class="columns is-centered">
+            <div class="column is-5-desktop">
+                <div class="content">
+                    <h1 class="title is-2 is-size-1 is-size-4-mobile has-text-weight-bold">Sign Up As a Vendor On Jumia Food</h1>
+                    <p class="has-text-centered-mobile is-size-4">
+                        Get more customers and increase your sales
+                    </p>
+                                        <a href="https://food.jumia.ug/contents/sell%20on%20jumia" class="button is-dark has-text-white is-small is-size-5 is-fullwidth-touch">
+                        Sign Up
+                    </a>
+                                    </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <section class="section apps-stores is-fullwidth bg-or">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-5-desktop has-text-centered-touch ptxs">
+                    <h1 class="title is-size-4-mobile is-size-1 has-text-white">Order food</h1>
+                    <p class="is-hidden-touch has-text-white is-size-4">The Jumia Food app makes it simple for anybody to use a mobile device to look over the menu of the best vendors and place an order for home delivery.</p>
+                    <div class="buttons-apps has-text-centered-touch">
+                                                    <a class="button app-icon" href="https://app.adjust.com/jbtqpb?campaign=UG_Homepage_iOS&amp;deep_link=hellofood%3A%2F%2F%3Fc%3DUG%26s%3Ds%0A" target="_blank">
+                                <img src="/images/apple.svg?v=1596116892">
+                            </a>
+                                                                            <a class="button app-icon" href="https://app.adjust.com/fkgptt?campaign=UG_Homepage_Android&amp;deep_link=hellofood%3A%2F%2F%3Fc%3DUG%26s%3Ds%0A" target="_blank">
+                                <img src="/images/android.svg?v=1596116892">
+                            </a>
+                                            </div>
+                </div>
+            </div>
+        </div>
+        <div class="app-stores-img is-hidden-touch">
+            <img src="/images/jumia-food-app-mockup.png?v=1596116892">
+        </div>
+    </section>
+
+    
+
+            </main>
+        
+                                <div class="complex-footer section bd-typo pbm">
+            <div class="container footer-container">
+                                    <div class="columns is-size-5">
+                        <div class="column">
+                            <h6 class="title is-size-base">City</h6>
+                            <ul class="unstyled">
+<li><a href="https://food.jumia.ug/restaurants" title="All restaurants near me">All restaurants near me</a></li>
+<li><a href="https://food.jumia.ug/restaurants/city/kampala/area/center-business-district" title="Restaurants in Center Business District">Restaurants in Center Business District</a></li>
+<li><a href="https://food.jumia.ug/restaurants/city/kampala/area/kololo" title="Restaurants in Kololo">Restaurants in Kololo</a></li>
+<li><a href="https://food.jumia.ug/restaurants/city/kampala/area/nakasero" title="Restaurants in Nakasero">Restaurants in Nakasero</a></li>
+<li><a href="https://food.jumia.ug/restaurants/city/kampala/area/bugolobi" title="Restaurants in Bugolobi">Restaurants in Bugolobi</a></li>
+<li><a href="https://food.jumia.ug/restaurants/city/kampala/area/ntinda" title="Restaurants in Ntinda">Restaurants in Ntinda</a></li>
+<li><a href="https://food.jumia.ug/restaurants/city/kampala/area/muyenga" title="Restaurants in Muyenga">Restaurants in Muyenga</a></li>
+</ul>
+<br>
+<ul class="unstyled">
+<li><a href="https://food.jumia.ug/restaurants/city/entebbe">Restaurants in Entebbe</a></li>
+<li><a href="https://food.jumia.ug/restaurants/city/jinja">Restaurants in Jinja</a></li>
+</ul>
+<br>
+<ul class="unstyled">
+<li><a href="https://food.jumia.ug/supermarket">Supermarket Delivery Kampala</a></li>
+<li><a href="https://food.jumia.ug/drinks">Alcohol delivery Kampala</a></li>
+<li><a href="https://food.jumia.ug/pharmacy">Phamacy delivery Kampala</a></li>
+<li><a href="https://food.jumia.ug/pharmacy">Shopping Online</a></li>
+</ul>
+                        </div>
+                        <div class="column">
+                            <h6 class="title is-size-base">Cuisines</h6>
+                            <ul class="unstyled">
+	<li><a href="https://food.jumia.ug/restaurants/cuisines/chicken">Chicken</a></li>
+	<li><a href="https://food.jumia.ug/restaurants/cuisines/pizza">Pizza</a></li>
+	<li><a href="https://food.jumia.ug/restaurants/cuisines/burger">Burgers</a></li>
+	<li><a href="https://food.jumia.ug/restaurants/cuisines/fast-food">Fast Food</a></li>
+	<li><a href="https://food.jumia.ug/restaurants/cuisines/sandwiches">Sandwiches</a></li>
+	<li><a href="https://food.jumia.ug/restaurants/cuisines/alcoholic-drinks">Alcohol delivery</a></li>
+	<li><a href="https://food.jumia.ug/restaurants/cuisines/grocery">Groceries</a></li>
+	<li><a href="https://food.jumia.ug/restaurants/cuisines/chinese">Chinese</a></li>
+	<li><a href="https://food.jumia.ug/restaurants/cuisines/indian">Indian</a></li>
+	<li><a href="https://food.jumia.ug/restaurants/cuisines/bakery">Bakery &amp; Bread</a></li>
+	<li><a href="https://food.jumia.ug/restaurants/cuisines/vegeterian">Vegetarian</a></li>
+	<li><a href="https://food.jumia.ug/restaurants/cuisines/salads">Salads</a></li>
+	<li><a href="https://food.jumia.ug/restaurants/cuisines/breakfast">Breakfast</a></li>
+</ul>
+                        </div>
+                        <div class="column">
+                            <h6 class="title is-size-base">Popular vendors</h6>
+                            <ul class="unstyled">
+	<li><a href="https://food.jumia.ug/restaurant/cn5sl">KFC</a></li>
+	<li><a href="https://food.jumia.ug/drinks">Jumia Party - Alcohol and More</a></li>
+	<li><a href="https://food.jumia.ug/restaurant/u5wo/cafesserie">Cafesserie</a></li>
+	<li><a href="https://food.jumia.ug/supermarket/u5oh/carrefour-supermarket-oasis-mall">Carrefour Supermarket (Oasis Mall)</a></li>
+	<li><a href="https://food.jumia.ug/restaurant/cp7vp">Cafe Javas</a></li>
+	<li><a href="https://food.jumia.ug/supermarket/u4at/nakasero-fresh-groceries">Nakasero Fresh Groceries &amp; Supermarket</a></li>
+	<li><a href="https://food.jumia.ug/restaurant/k9rc/the-food-hub">The Food Hub</a></li>
+	<li><a href="https://food.jumia.ug/restaurant/cd3jz">Pizza Hut</a></li>
+	<li><a href="https://food.jumia.ug/restaurant/u9dt/izumi-restaurant">Izumi Restaurant &amp; Lounge</a></li>
+	<li><a href="https://food.jumia.ug/restaurant/u1wx">Meza Shawarma</a></li>
+	<li><a href="https://food.jumia.ug/restaurant/k8gj/yujo-japanese-restaurant">Yujo Japanese Restaurant</a></li>
+	<li><a href="https://food.jumia.ug/restaurant/cg4kc">Yo Kuku</a></li>
+	<li><a href="https://food.jumia.ug/restaurant/cq8oa">UGAROLL</a></li>
+	<li><a href="https://food.jumia.ug/restaurant/k6nm/mediterraneo">Mediterraneo</a></li>
+	<li><a href="https://food.jumia.ug/restaurant/ck1hh">Java House</a></li>
+</ul>
+                        </div>
+                        <div class="column">
+                            <h6 class="title is-size-base">Jumia Food</h6>
+                                                                                        <ul>
+                                                                            <li>
+                                            <a href="/contents/about.htm">
+                                                About us
+                                            </a>
+                                        </li>
+                                                                            <li>
+                                            <a href="/contents/press.htm">
+                                                Press
+                                            </a>
+                                        </li>
+                                                                            <li>
+                                            <a href="/contents/contact.htm">
+                                                Contact
+                                            </a>
+                                        </li>
+                                                                            <li>
+                                            <a href="/contents/terms-and-conditions.htm">
+                                                Terms and Conditions
+                                            </a>
+                                        </li>
+                                                                            <li>
+                                            <a href="/contents/privacy.htm">
+                                                Privacy Policy
+                                            </a>
+                                        </li>
+                                                                            <li>
+                                            <a href="/contents/howitworks">
+                                                How it works?
+                                            </a>
+                                        </li>
+                                                                            <li>
+                                            <a href="/contents/apps">
+                                                Check out jumia's food delivery apps for Android and iPhone
+                                            </a>
+                                        </li>
+                                                                            <li>
+                                            <a href="/contents/Become%20a%20rider!">
+                                                Become a rider!
+                                            </a>
+                                        </li>
+                                                                            <li>
+                                            <a href="/contents/Jumia%20Prime%20Terms%20and%20Conditions">
+                                                Jumia Prime
+                                            </a>
+                                        </li>
+                                                                            <li>
+                                            <a href="/contents/Sell%20on%20Jumia">
+                                                Sell on Jumia
+                                            </a>
+                                        </li>
+                                                                    </ul>
+                                                                                                                    <div class="mtl">
+                                    <h6 class="title is-5">Contact us</h6>
+                                    <ul class="is-size-4">
+                                        <li>
+                                                                                                                                                                                                    <a href="https://twitter.com/JumiaFoodUG" target="_blank" rel="nofollow" class="is-6">
+                                                    <span class="icon">
+                                                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                                                    </span>
+                                                    </a>
+                                                                                                                                                                                                                                                    <a href="https://www.facebook.com/JumiaFoodUG/" target="_blank" rel="nofollow" class="is-6">
+                                                    <span class="icon">
+                                                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                                                    </span>
+                                                    </a>
+                                                                                                                                    </li>
+                                    </ul>
+                                </div>
+                                                    </div>
+                    </div>
+                    
+                                                                        <div class="columns">
+    <div class="column simple-footer-cms">
+        <a target="_blank" href="/contents/terms-and-conditions.htm">
+            Terms and Conditions
+        </a>
+        &nbsp;·&nbsp;
+        <a target="_blank" href="/contents/privacy.htm">
+            Privacy Policy
+        </a>
+    </div>
+    <span class="column simple-footer-trademark has-text-right">
+  © Copyright 2022 Jumia Food is a registered trademark
+</span>
+</div>
+            </div>
+        </div>
+    
+    
+
+                <script>window.TRANSLATIONS = {"jumiafood.home.services.choose":"Choose a service","jumiafood.shop.location.choose_another_location":"Choose another location","jumiafood.shop.location.choose_on_map":"Choose on map","jumiafood.shop.location.dont_deliver_text":"Sorry, we don't deliver there... yet! Jumia Food is expanding delivery locations, so stay tuned!","jumiafood.shop.location.dont_deliver_title":"We don\u2019t deliver at this address","jumiafood.shop.location.enter_delivery_address":"Enter your delivery address","jumiafood.shop.location.find_food_button":"Show results","jumiafood.shop.location.not_found":"Not found","jumiafood.shop.location.see_where_we_deliver":"See where we deliver","jumiafood.shop.location.select_city":"Select your city","jumiafood.shop.location.select_area":"Select your area","jumiafood.shop.location.show_results":"Show results","jumiafood.shop.location.wrong_country.button_accept":"Yes, change country","jumiafood.shop.location.wrong_country.button_reject":"No, keep country","jumiafood.shop.location.wrong_country.text":"It seems that you are at %client-country% and your account is defined to %api-country%. If you don\u2019t change it, your delivery location will not be valid.","jumiafood.shop.location.wrong_country.title":"Are you in a different country?","jumiafood.shop.location.delivering_location":"Delivering Location","jumiafood.shop.location.choose_your_location":"You can move the map to choose your location","jumiafood.shop.location.choose_this_location":"CHOOSE THIS LOCATION","jumiafood.shop.location.we_dont_deliver_here":"Sorry, we don't deliver here","jumiafood.shop.vendor.listing.deliver_to":"delivering to","shop.location.top_cities.header":"Popular Cities","shop.location.more_cities.header":"More Cities"};</script>
+
+                    
+            <script defer="" type="text/javascript" src="https://africa-public.food.jumia.com/cdn/production/shop-new/js/vendors-app-9374ea3d.js"></script>
+    <script defer="" type="text/javascript" src="https://africa-public.food.jumia.com/cdn/production/shop-new/js/app-06c42921.js"></script>
+        <script>
+        // disable bfcache navigations (issues on some safari iOS devices)
+        window.onpageshow = function(event) {
+            if(event.persisted) {
+                window.location.reload()
+            }
+        }
+    </script>
+        <div id="modal-ajax" class="modal has-tabs">
+            <div class="modal-background"></div>
+            <div class="modal-card fh-ctr wb-word" data-form-post-ajax=""></div>
+        </div>
+    </section>
+
+                
+    
+                <div class="cookie-notice-container"><style>
+    .live-c {
+    margin-top: -100px !important;
+    }
+  </style> <div class="cookie-notice-text"><p>
+      Jumia Food uses cookie files in order to improve your online experience and for analytics. You can disable cookies in your browser settings at any moment.
+      <a href="/contents/privacy.htm#cookies" rel="nofollow" target="_blank">
+        Cookie Privacy
+      </a></p></div> <div class="cookie-notice-close-btn"><span>×</span></div></div>
+    <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"2e0dde5d40","applicationID":"97172041","transactionName":"Z1RTbUoECEBWARJeC14eckxLEQleGAQJWABAUF9dWUsVW1gSSEQNRFQfWlcLEkFYDgpSFh5ZXlRdXw5cWgcnVBBZXl8=","queueTime":1,"applicationTime":103,"atts":"SxNQGwIeG04=","errorBeacon":"bam.nr-data.net","agent":""}</script>
+
+
+
+<script type="text/javascript" id="">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","1184614151558233");fbq("track","PageView");</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1184614151558233&amp;ev=PageView&amp;noscript=1"></noscript>
+<style>#snapins_invite {visibility: hidden!important;}</style>
+<div class="embeddedServiceInvitation" id="snapins_invite" aria-live="assertive" role="dialog" aria-atomic="true"></div>
+<style>
+   .embeddedServiceSidebarMinimizedDefaultUI{background: #F68B1E !important; border:0;}
+   .embeddedServiceSidebarMinimizedDefaultUI .minimizedText>.message {cursor: pointer; color: #fff; background: inherit; font-size: 17px; font-weight: 700; text-decoration: none !important;}
+   .embeddedServiceSidebarMinimizedDefaultUI.minimizedContainer:focus {text-decoration: none !important;}
+   .embeddedServiceHelpButton .helpButton {top: 100%;z-index: 10000;margin-left: 25px;margin-top: -51px; left: 20px;}
+   .embeddedServiceHelpButton .helpButton .uiButton{background: #F68B1E !important;}
+   #helpButtonSpan span.message {cursor: pointer; color: #fff; background: inherit; font-size: 17px; font-weight: 700; text-decoration: none !important;}
+   .helpButtonEnabled:focus .helpButtonLabel {text-decoration: none !important;}
+   .startButton{background: #F68B1E !important;}
+   .fieldList .input:focus {border:1px solid #F68B1E !important; box-shadow: inset 0 0 0 0 !important;}
+   .embeddedServiceLiveAgentStateChatItem.chatMessage button {background: #F68B1E !important;}
+   .embeddedServiceLiveAgentStateChatItem.chatMessage button span {text-transform: uppercase; font-weight: normal; font-size: .875rem; color: #333333;}
+   .embeddedServiceLiveAgentStateChat .messageArea:focus {border:0;}
+   .dockableContainer.showDockableContainer{width: 500px !important;}
+   .postChatButton{background: #F68B1E !important;}
+   .saveTranscriptButton span{color: #f68b1e; !important;}
+   .dialog-button-0{background: #F68B1E !important;}
+   .embeddedServiceSidebarButton:focus{text-decoration: none !important;}
+   .dialog-button-1 span{color: #f68b1e;}
+   .embeddedServiceSidebarButton.uiButton--inverse .label {color: #F68B1E;}
+   .embeddedServiceSidebarButton.uiButton--inverse:not(:disabled):hover {background-color: #feefde;}
+   .embeddedServiceSidebarButton.uiButton--inverse:not(:disabled) {box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%)}
+   .embeddedServiceSidebarButton.uiButton--inverse:not(:disabled):focus {background: none;}
+   .embeddedServiceSidebar.layout-docked .dockableContainer {left: 20px;}
+   .embeddedServiceSidebarMinimizedDefaultUI {left: 20px;}
+</style>
+<script type="text/javascript" id="" src="https://service.force.com/embeddedservice/5.0/esw.min.js"></script><script type="text/javascript" id="">$(document).ready(function(){$("#header-promo-container").append('            \x3cdiv class\x3d"food_header_bar_container"\x3e                \x3cstyle type\x3d"text/css"\x3e                    #food_header_bar {                        background-color:#ff9900;                        text-align:center;                        font-size: 20px;                        padding:20px 20px 15px;                        color:#FFF;                        font-family: Arial, Helvetica, sans-serif;                    }                    span#food_header_bar_button a {                        background-color: #ffffff;                        padding:5px 10px;                        text-decoration:none;                        color:#000000;                        margin-left:20px;                        transition: background-color 0.4s, transform 0.4s;                    }                    span#food_header_bar_button a:hover {                        background-color: #000000;                        color:#ffffff;                    }                \x3c/style\x3e                \x3cdiv id\x3d"food_header_bar"                    data-id\x3d"header_promo_id_test"                    data-title\x3d"header_promo_title_test"                    data-position\x3d"header"\x3e                    \x3cspan style\x3d"display:inline-block; margin-bottom:10px;margin-top:0px"\x3e                   Call: \x3cspan style\x3d"color: #ffffff;"\x3e\x3ca style\x3d"color: #ffffff;" href\x3d"tel:0312308200"\x3e0312308200\x3c/a\x3e\x3c/span\x3e\ud83d\udcde to order. \x3c/span\x3e                                                      \x3c/div\x3e            \x3c/div\x3e        ')});</script><iframe src="https://7224d019a99f9418d568f0888e3957ba.safeframe.googlesyndication.com/safeframe/1-0-38/html/container.html" style="visibility: hidden; display: none;"></iframe>
+<script type="text/javascript" id="">var initESW=function(a){var b="c.la3-c1cs-cdg.salesforceliveagent.com",d="5721p00000004w5",e="5731p00000005ud",f="00D24000000czLI",g="EmbeddedServiceLiveAgent_Parent04I08000000TQRAEA4_17e05e1b81b",h="https://jumia1.my.salesforce.com",k="https://jumia.secure.force.com/JumiaLiveAgent";embedded_svc.settings.displayHelpButton=!0;embedded_svc.settings.enabledFeatures=["LiveAgent"];embedded_svc.settings.entryFeature="LiveAgent";embedded_svc.settings.language=getSFAvailableLanguage("en_UG");
+embedded_svc.settings.defaultMinimizedText=getDefaultMinimizedText("en_UG");embedded_svc.settings.extraPrechatFormDetails=[{label:"Case Origin",value:"ODS Web - Desktop",displayToAgent:!0}];embedded_svc.settings.extraPrechatInfo=[{entityName:"Case",showOnCreate:!0,saveToTranscript:"CaseId",entityFieldMaps:[{isExactMatch:!1,fieldName:"Origin",doCreate:!0,doFind:!1,label:"Case Origin"}]}];1===google_tag_manager["GTM-T3KQC9"].macro(19)&&(embedded_svc.settings.prepopulatedPrechatFields={FirstName:"",
+LastName:"",Email:"",Phone:null},embedded_svc.addEventHandler("afterMaximize",function(c){(c=document.getElementsByClassName("startButton")[0])&&c.click()}));embedded_svc.init(h,k,a,f,"Jumia_Food_Customer_Live_Agent",{baseLiveAgentContentURL:"https://"+b+"/content",deploymentId:d,buttonId:e,baseLiveAgentURL:"https://"+b+"/chat",eswLiveAgentDevName:g,isOfflineSupportEnabled:!1})};
+if(window.embedded_svc)initESW("https://service.force.com");else{var s=document.createElement("script");s.setAttribute("src","https://jumia1.my.salesforce.com/embeddedservice/5.0/esw.min.js");s.onload=function(){initESW(null)};document.body.appendChild(s)}function getSFAvailableLanguage(a){var b={fr_MA:"fr",fr_CI:"fr",fr_TN:"fr",fr_SN:"fr"};return a in b?b[a]:a}function getDefaultMinimizedText(a){return"fr"===getSFAvailableLanguage(a)?"Chattez avec nous":"Chat with us"};</script><script id="common-script" type="text/javascript" src="https://service.force.com/embeddedservice/5.0/utils/common.min.js"></script><script id="liveagent-esw-script" type="text/javascript" src="https://service.force.com/embeddedservice/5.0/client/liveagent.esw.min.js"></script><form id="fileUploadForm" enctype="multipart/form-data" method="post" target="fileUploadIframe"><input type="file" id="fileSelector" name="file" style="display: none;"><input name="filename" type="hidden"></form><iframe id="fileUploadIframe" name="fileUploadIframe" title="FileUploadFrame" style="display: none;"></iframe><iframe id="esw_storage_iframe" src="https://service.force.com/embeddedservice/5.0/esw.html?parent=https://food.jumia.ug/" title="Live Chat Metadata" style="display: none;"></iframe><script type="text/javascript" src="https://c.la3-c1cs-cdg.salesforceliveagent.com/chat/rest/EmbeddedService/EmbeddedServiceConfig.jsonp?Settings.prefix=EmbeddedService&amp;org_id=00D24000000czLI&amp;EmbeddedServiceConfig.configName=Jumia_Food_Customer_Live_Agent&amp;callback=embedded_svc.liveAgentAPI.handleChatSettings&amp;version=48&amp;EmbeddedServiceConfig.language=en_UG"></script><script id="invite-esw-script" type="text/javascript" src="https://service.force.com/embeddedservice/5.0/client/invite.esw.min.js"></script><div class="embeddedServiceHelpButton"><div class="helpButton"><button class="uiButton helpButtonEnabled" href="javascript:void(0)"><span class="embeddedServiceIcon" aria-hidden="true" data-icon="" style="display: inline-block;"></span><span class="helpButtonLabel" id="helpButtonSpan" aria-live="polite" aria-atomic="true"><span class="assistiveText">Live chat:</span><span class="message">Chat with us</span></span></button></div></div><script id="inert-script" type="text/javascript" src="https://service.force.com/embeddedservice/5.0/utils/inert.min.js"></script><iframe src="https://www.google.com/recaptcha/api2/aframe" width="0" height="0" style="display: none;"></iframe><script type="text/javascript" src="https://d.la3-c2-fra.salesforceliveagent.com/chat/rest/EmbeddedService/EmbeddedServiceConfig.jsonp?Settings.prefix=EmbeddedService&amp;org_id=00D24000000czLI&amp;EmbeddedServiceConfig.configName=Jumia_Food_Customer_Live_Agent&amp;callback=embedded_svc.liveAgentAPI.handleChatSettings&amp;version=48&amp;EmbeddedServiceConfig.language=en_UG"></script></body></html>

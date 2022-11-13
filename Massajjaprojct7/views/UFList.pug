@@ -1,0 +1,38 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  title Non-Responsive Table
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet', href='css/table.css')
+  link(href='bootstrap/css/bootstrap.css', rel='stylesheet')
+#nav-tab.nav.nav-tabs(role='tablist')
+#page-wrap
+  h1 Urban Farmers List
+  div
+    form(method="GET" action='/registeruf')
+          button.btn.btn-primary.btn-block(type='submit') Add New Urban Farmer
+  table
+    tr
+        th Names
+        th Ward
+        th Phone Number
+        th Adress
+        th activity
+        th Changes
+    tbody 
+        if urbanfarmers.length
+            each urbanfarmer in urbanfarmers
+                    tr.tds 
+                        td #{urbanfarmer.names}
+                        td #{urbanfarmer.ward}
+                        td #{urbanfarmer.phone}
+                        td #{urbanfarmer.address}
+                        td #{urbanfarmer.activity}
+                        td
+                            a.btn.btn-success.btn-block(href='/Urbanfarmer/update/'+urbanfarmer._id) Update
+        div.form-row
+            div.col.form-group
+                a(class='button' href='/dashboardfo') Back
+
+block footer
+    div.col-md-12 ©️ 2022 UFARM Masajja Tukolerewamu Incorporated

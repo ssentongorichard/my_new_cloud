@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1,
+shrink-to-fit=no" />
+  
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.cs
+s" integrity="sha384-
+Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+crossorigin="anonymous" />
+  
+    <link rel="stylesheet" href="./style.css" />
+    <title>Ebola Patients' Form</Form></title>
+  </head>
+  
+  <body class="container bg-light">
+    <!-- Start Header form -->
+    <div class="text-center pt-5">
+      <img src="https://i.ibb.co/8cDgdFX/Logo.png" alt="network-logo"
+width="72" height="72" />
+      <h2>Ebola Patient Registration Form</h2>
+    </div>
+    <!-- End Header form -->
+  
+    <!-- Start Card -->
+    <div class="card">
+      <!-- Start Card Body -->
+      <div class="card-body">
+        <!-- Start Form -->
+        <form id="" action="#" method="" class="" novalidate
+autocomplete="off">
+          <h6>Patient Details</h6>
+          <!-- Start Input Date-->
+          <div class="form-row">
+            <div class="form-group col-md-4 col">
+              <label for="inputDate">Date</label>
+              <input type="date" class="form-control" id="inputDate"
+name="date" required />
+            </div>
+            <!-- Start Input Start Time -->
+            <div class="form-group col">
+              <label>Admission Time</label>
+              <div class="d-flex flex-row justify-content-between alignitems-center">
+                <select class="form-control mr-1" id="inputStartTimeHour"
+name="startHour" required>
+                  <option value="" disabled selected>Time</option>
+                  <option value="07">07am</option>
+                  <option value="08">08am</option>
+                  <option value="09">09am</option>
+                  <option value="10">10am</option>
+                  <option value="11">11am</option>
+                  <option value="12">12pm</option>
+                  <option value="13">13pm</option>
+                  <option value="14">14pm</option>
+                  <option value="15">15pm</option>
+                  <option value="16">16pm</option>
+                  <option value="17">17pm</option>
+                </select>
+            </div>
+            <!-- End Input End Time -->
+            </div>
+          <!-- Start Input Name -->
+          <div class="row">
+            <div class="form-group col">
+                <label for="inputName"> First Name</label>
+                <input
+                type="text"
+                class="form-control"
+                id="firstname"
+                name="firstname"
+                onblur="validateFirstName()"
+                placeholder="First name" required />
+              </div>
+              <div class="form-group col">
+                <label for="inputName"> Last Name</label>
+                <input
+                type="text"
+                class="form-control"
+                id="lastname"
+                name="lastname"
+                onblur="validateLastName()"
+                placeholder="Last name" required />
+              </div>
+          </div>
+          <!-- End Input Name -->
+  
+          <!-- Start Input Email -->
+          <div class="row">
+          <div class="form-group col">
+            <label for="inputEmail">Email</label>
+            <input type="email" class="form-control"
+            id="email" name="email"
+            onblur="validateEmail()"
+            placeholder="Enter email"  required />
+            <!-- pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" -->
+          </div>
+          <!-- Start Input Telephone -->
+          <div class="form-group col">
+            <label for="inputPhone">Phone</label>
+            <input type="tel" class="form-control"
+            id="phonenumber"
+            onblur="validatePhone()"
+            name="phonenumber" placeholder=""  required />
+            <!-- pattern="\d{3}\d{3}\d{4}\d{2}" -->
+          </div>
+        </div>
+        <!-- input country -->
+        <div class="row">
+        <div class="form-field col">
+                <label for="country">Country:</label>
+                <select name="country" id="country">
+                  <option value="uganda" name="uganda">Uganda</option>
+                  <option value="congo" name="congo">Congo</option>
+                  <option value="sudan" name="sudan">Sudan</option>
+                </select>
+            </div>
+      <div class="form-group col">
+        <!-- input national id no -->
+          <label for="inputName"> National Id No.</label>
+          <input type="text" class="form-control"
+          id="nin"
+          onblur="validateNin()"
+          name="nin" placeholder="NIN" required />
+        </div>
+      <div class="form-group col-md-4 col">
+            <label for="inputDate">Date of Birth</label>
+            <input type="date" class="form-control" id="dateOfBirth"
+name="dateOfBirth" required />
+          </div>
+      </div>
+        <!-- gender -->
+        <div class="form-group">
+          <legend class="col-form-label pt-0">Gender</legend>
+          <div class="form-check form-check-inline">
+            <input type="radio" class="form-check-input" id="gender"
+name="gender" value="type1" required />
+            <label class="form-check-label"
+for="inlineRadioType1">Male</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input type="radio" class="form-check-input"
+id="inlineRadioType2" name="roomType" value="type2" required />
+            <label class="form-check-label"
+for="inlineRadioType2">Female</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input type="radio" class="form-check-input"
+id="inlineRadioType3" name="roomType" value="type3" required />
+            <label class="form-check-label"
+for="inlineRadioType3">Secret</label>
+          </div>
+        </div>
+        </div>
+        <!-- End Input Date , Start Time and End Time -->
+        <h6>Next of Kin </h6>
+      <div class="row row-part">
+        <div class="form-group col">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" id="name" name="name"
+placeholder="Enter name"  required />
+          <!-- pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" -->
+        </div>
+        <!-- Start Input Telephone -->
+        <div class="form-group col">
+          <label for="inputPhone">Phone</label>
+          <input type="tel" class="form-control" id="phoneNumber"
+name="phoneNumber" placeholder=""  required />
+          <!-- pattern="\d{3}\d{3}\d{4}\d{2}" -->
+        </div>
+      </div>
+        <div class="form-group col">
+          <label for="inputName"> Places visited in last 24hours</label>
+          <input type="text" class="form-control" id="placeVisited"
+name="placeVisited" placeholder="Places last visited" required />
+</div>
+<div class="form-group col">
+  <label for="inputName">Contacts in last 24hours</label>
+  <input type="text" class="form-control" id="contacts"
+name="cotacts" placeholder="Contacts" required />
+</div>
+<div class="row">
+<div class="form-field col">
+<label for="conditions">Patient's Condition:</label>
+<div class="radio">
+  <input
+    type="checkbox"
+    name="temperature"
+    autocomplete="off"
+    id="temperature"
+    value="temperature"
+  />
+  <span>High body temperature</span>
+  <input
+    type="checkbox"
+    name="vomiting"
+    autocomplete="off"
+    id="vomiting"
+    value="vomiting"
+  />
+  <span>Vomiting</span>
+  <input
+    type="checkbox"
+    name="bleeding"
+    autocomplete="off"
+    id="bleeding"
+    value="bleeding"
+  />
+  <span>Bleeding</span>
+</div>
+</div>
+<div class="form-group col">
+<label for="inputName">Any Other Condition</label>
+<input type="text" class="form-control" id="otherCondition"
+name="otherCondition" placeholder="Please specify"  />
+</div>
+</div>
+<div class="row">
+<div class="col-4"></div>
+<div class="form-group col">
+<input type="submit" name="submit" id="submit" class="btn btnprimary btn-block" value="SUBMIT">
+</div>
+<div class="col-4"></div>
+</div>
+<div class="row">
+<div class="col-5"></div>
+<div class="my-4 text-muted text-center row">
+<p>© Ebola Health UG</p>
+</div>
+<div class="col-3"></div>
+</div>
+<script src="validate.js"></script>
+</body>
+</html>

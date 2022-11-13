@@ -1,0 +1,39 @@
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible', content='IE=edge')
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  title Urban Farmer details
+  link(rel='stylesheet', type='text/css', href='../css/style.css')
+.container
+  header
+    h1#title MASSAJJA URBAN FARMER INITIATIVE
+  #form-wrapper
+    form#register-form(action='/registerao', method='post')
+        .container2
+            .padding.width
+                select#role(name='role')
+                    option(value='role') role
+                    |                 &gt;
+                    option(value='AgricOfficer') AgricOfficer
+        .padding
+            input#datetoday.form-control-2(type='date', name='datetoday', placeholder='date')
+        .padding
+            input#names.form-control-2(type='text', name='names', placeholder='Fullname')
+        .container2
+            .padding
+                select#dropdown(name='gender')
+                    option(value='select your Gender') Select Gender
+                    |                 &gt;
+                    option(value='Male') Male
+                    option(value='Female') Female
+                    option(value='Secret') Secret
+        .container3
+            .padding
+                input#foid.form-control-2(type='text', name='foid', placeholder='AO Id')
+        .container2  
+        .padding
+            input#password.form-control-2(type='text', name='password', placeholder='Password')
+        button#submit(type='submit') Register
+  p.copyright
+    | &copy; Massajja Ubarn farmer initiative. All rights reserved!
+  script(src='/validate.js')

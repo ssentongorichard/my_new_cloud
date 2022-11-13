@@ -1,0 +1,76 @@
+doctype html
+head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet' href='bootstrap-css/css/bootstrap.css')
+    link(rel='stylesheet' href='css/style.css')
+    title Registration
+nav.navbar.navbar-expand-lg.bg-light.pb-4
+    .container-fluid
+        a.navbar-brand(href='#' style='font-weight: bolder; font-size: 25px;') Ufarm
+        button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+            span.navbar-toggler-icon
+        #navbarSupportedContent.collapse.navbar-collapse
+            ul.navbar-nav.me-auto.mb-2.mb-lg-0
+                li.nav-item
+                    a.nav-link.active(aria-current='page' href='#') Home
+                li.nav-item
+                    a.nav-link(href='#') Link
+                li.nav-item.dropdown
+                    a.nav-link.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
+                        | Dropdown
+                    ul.dropdown-menu
+                        li
+                            a.dropdown-item(href='#') Action
+                        li
+                            a.dropdown-item(href='#') Another action
+                        li
+                            hr.dropdown-divider
+                        li
+                            a.dropdown-item(href='#') Something else here
+                li.nav-item
+                    a.nav-link.disabled Disabled
+            form.d-flex.mt-2(role='search')
+                a.btn.btn-style(href='home-page.html') Back
+.container-fluid.form-style
+    form#signup.form(action='/produce/update/?id='+product._id name='productupdate' method='POST')
+        h3 Update Produce 
+        hr
+        .row
+            .col
+                .form-field
+                    label(for='productname') Product Name:
+                    select(name='productname')
+                        option(value="Cheese Salted" selected = product.productname === "Cheese Salted") Cheese Salted
+                        option(value="Ghee Salted" selected = product.productname === 'Ghee Salted') Ghee Salted
+                        option(value="Carrots" selected = product.productname === 'Carrots') Carrots
+
+        .row
+            .col
+                .form-field
+                    label(for='')
+                        | Price:
+                        small  *
+                    input#price(type='number' name='unitprice' autocomplete='off' value=product.unitprice)
+            .col
+                .form-field
+                    label(for='')
+                        | Stock Count:
+                        small  *
+                    input#ward(type='number' name='stockcount' autocomplete='off' value=product.stockcount)
+            .col
+                .form-field
+                    label(for='') Delivery Mode:
+                    select(name='deliverymode')
+                        option(value="pickup" selected = product.deliverymode === "pickup") Pick Up
+                        option(value="homedelivery" selected = product.deliverymode === "homedelivery") Home Delivery
+            .col
+                .form-field
+                    label Mode of Payment:
+                    select(name='modeofpayment')
+                        option(value="cash" selected = product.modeofpayment === 'cash') Cash
+                        option(value="mobilemoney" selected = product.modeofpayment === 'mobilemoney') Mobile Money   
+            .form-field
+                input.btn.register-btn(type='submit' value='Register')
+script(src='bootstrap-js/js/bootstrap.bundle.js')

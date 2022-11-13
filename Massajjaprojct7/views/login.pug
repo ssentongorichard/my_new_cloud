@@ -1,0 +1,71 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  meta(http-equiv='X-UA-Compatible', content='ie=edge')
+  title Login Page - Dashboard Admin Template
+  link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600')
+  link(href='bootstrap/css/bootstrap.css', rel='stylesheet')
+  link(rel='stylesheet', type='text/css', media='screen', href='css/main.css')
+  link(rel='stylesheet', href='css/login.css')
+body
+  div.bg
+    // nav bar
+    nav.navbar.navbar-expand-lg.fixed-top.navbgcolor
+      .container-fluid
+        a.navbar-brand.white(href='#')
+          h4  UFARM
+        button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+        #navbarSupportedContent.collapse.navbar-collapse
+          ul.navbar-nav.me-auto.mb-2.mb-lg-0
+            li.nav-item.dropdown
+              a.nav-link.dropdown-toggle(href='#', role='button', data-bs-toggle='dropdown', aria-expanded='false', style='color:white;')
+                | Market
+              ul.dropdown-menu
+                li
+                  a.dropdown-item(href='#') Pricing
+                li
+                  a.dropdown-item(href='#') Make booking
+                li
+                  hr.dropdown-divider
+                li
+                  a.dropdown-item(href='#') Something else here
+            li
+              a.nav-link.white(aria-current='page', href='#') Home
+            li
+              a.nav-link.white(href='#') About Us
+          form.d-flex
+            .container-fluid
+              a.navbar-brand.white(href='#')
+                a.btn.btn-success(href='#') Login
+              button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+                span.navbar-toggler-icon
+              #navbarSupportedContent.collapse.navbar-collapse
+    // Form
+    .container.padding
+      .row.tm-mt-big
+        .col-12.mx-auto.tm-login-col
+          .bg-light.tm-block.rounded.text-muted
+            .row
+              .col-12.text-center
+                i.fas.fa-3x.fa-tachometer-alt.tm-site-icon.text-center
+                h2.tm-block-title.mt-3 Login
+            .row.mt-2
+              .col-12
+                form.tm-login-form(action='/login' method='post')
+                  .input-group
+                    label.col-md-2.col-form-label(for='foid') Username
+                    input#foid.rounded.form-control.validate.col-xl-9.col-lg-8.col-md-8.col-sm-7(name='foid' type='text' required='' )
+                  .input-group.mt-3
+                    label.col-md-2(for='password') Password
+                    input#password.form-control.rounded(name='password' type='password' required='')
+                  .input-group.mt-3
+                    button.btn.btn-success.d-inline-block.mx-auto(type='submit') Login
+                  .input-group.mt-3
+                    p
+                      em Login to start your session
+    footer.row.tm-mt-big
+      .col-12.font-weight-light.text-center
+        p.d-inline-block.tm-bg-black.text-white.py-2.px-4
+          | &copy; Massajja Urban farmers initiative. All rights reserved

@@ -1,0 +1,41 @@
+head
+    header.card-header
+        h4.card-title Product List
+    br
+    nav
+    #nav-tab.nav.nav-tabs(role='tablist')
+        //- a#nav-profile-tab.nav-item.nav-link(href='/registerFarmerOne') Register FarmerOne
+    #nav-tabContent.tab-content
+    br
+    table.table.table-bordered 
+        thead
+            tr
+                th Product Category 
+                th Product Name
+                th Product Type
+                th Product Image
+                th Update
+                th Change Availability
+                th Delete
+        tbody
+            if goods.length
+                each item in goods
+                    if item.availability == "booked"
+                        tr
+                            td #{item.productcategory}
+                            td #{item.productname}
+                            td #{item.producttype}
+                            td 
+                                img(src="/"+item.productimage, alt="Image" width='150px' height="150px") 
+                            //- td #{moment(us
+                            td
+                                a.btn.btn-secondary.btn-block(href='/produce/available/'+item._id) Availability
+                            td
+                                form(method="post" action='/produce/delete')
+                                    input(type="hidden" placeholder="" name="id", value=item._id)
+        div.form-row
+            div.col.form-group
+                a(class='button' href='/agricOfficerDash') Back
+
+block footer
+    div.col-md-12 ©️ 2022 UFARM Masajja Tukolerewamu Incorporated
