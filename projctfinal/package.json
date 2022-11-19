@@ -1,0 +1,30 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "This is our first node project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "keywords": [
+    "Learning",
+    "nodejs"
+  ],
+  "author": "Richard",
+  "license": "ISC",
+  "dependencies": {
+    "connect-ensure-login": "^0.1.1",
+    "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "moment": "^2.29.4",
+    "mongoose": "^6.6.5",
+    "multer": "^1.4.5-lts.1",
+    "nodemon": "^2.0.20",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^7.1.2",
+    "pug": "^3.0.2",
+    "session": "^0.1.0"
+  }
+}

@@ -1,0 +1,66 @@
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible', content='IE=edge')
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  title Register-farmerone
+  link(rel='stylesheet', type='text/css', href='../css/style.css')
+.container
+  #form-wrapper
+    form.form-padding(method="GET" action='/dashboardfo')
+              button.btn.btn-style.btn-dark(type='') Cancel
+    form.form-padding(action='/registerfo' method='post' onsubmit="return fovalidate(event);" )
+      .container2
+        .padding.width
+          select#role(name='role')
+            option(value='role') role
+            option(value='FarmerOne') FarmerOne
+          small#roleerr
+      .padding
+        input#datetoday.form-control-2.width-lg(type='date' name='datetoday' placeholder='date')
+        small#datetodayerr
+      .padding
+        input#names.form-control-2.width-lg(type='text' name='names' placeholder='Fullname')
+        small#nameserr
+      .padding
+        input#dateofbirth.form-control-2.width-lg(type='date' name='dateofbirth' placeholder='dateOfBirth')
+        small#dateofbirtherr
+      .container2
+        .padding
+          select#gender(name='gender')
+            option(value='select your Gender') Select Gender
+            option(value='Male') Male
+            option(value='Female') Female
+            option(value='Secret') Secret
+          small#gendererr
+        .padding
+          select#activity(name='activity')
+            option(value='select activity') Activity done
+            option(value='Dairy') Dairy
+            option(value='Poultry') Poultry
+            option(value='Hoticulture') Hoticulture
+          small#activityerr
+        .padding
+          input#username.form-control-2.form-float(type='text' name='username' placeholder='User name')
+          small#usernameerr
+        .padding
+          input#yearsofstay.form-control-2.form-float(type='text' name='yearsofstay' placeholder='Years stayed')
+          small#yearsofstayerr
+      .container3
+        .padding
+          input#foid.form-control-2(type='text' name='foid' placeholder='FO Id')
+          small#foiderr
+        .padding
+          input#nid.form-control(type='text' name='nid' placeholder='NIN')
+          small#niderr
+        .padding
+          input#phone.form-control-2(type='text' name='phone' placeholder='Phone')
+          small#phoneerr
+        .padding
+          input#password.form-control-2.form-float(type='text' name='password' placeholder='Password')
+          small#passworderr
+      .pad
+        input#address.form-control-2.form-float.width-lg(type='text' name='address' placeholder='Adress')
+        small#addresserr
+      p.null-field
+      button#submit(type='submit') Register
+  script(src='/js/Validatefo.js')

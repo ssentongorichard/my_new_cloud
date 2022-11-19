@@ -1,0 +1,66 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible', content='IE=edge')
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  title Urban Farmer Upload form
+  link(rel='stylesheet', type='text/css', href='css/style.css')
+.container
+    #form-wrapper
+        form#upload-form(action='/uploadproduce' name='registration' enctype="multipart/form-data" method='POST')
+            .container2
+                h3 Produce Registration Form
+            .padding
+                input#datetoday.form-control-2(type='date', name='datetoday', placeholder='date')
+            .padding
+                input#productname.form-control-2(type='text', name='productname', placeholder='Producename')
+            .container2
+                .padding
+                    select#producttype(name='producetype')
+                        option(value='select produce')
+                         | Select product type
+                        |                 &gt;
+                        option(value="Dairy") Dairy
+                        option(value="Hoticulture") Hoticuture
+                        option(value="Poultry") Poultry
+                //- .padding
+                    //- select#ward(name='ward')
+                    //-     if currentUser
+                    //-         option(value = currentUser._id) #{currentUser.ward}
+                .padding
+                    input#unitprice.width3(type='number' name='unitprice' autocomplete='off' placeholder='Price')
+                .padding
+                    select#quantity(name='quantity')
+                        option(value='select your quantity') Select Quantity
+                        |                 &gt;
+                        option(value='1') One
+                        option(value='2') Two
+                        option(value='3') Three
+                        option(value='4') Four
+                        option(value='5') Five
+                        option(value='largestock') Large Stock
+            .container3
+                .padding
+                    select#deliverymode.width2(name='deliverymode')
+                        option(value='select mode of delivery')
+                         | Select mode of delivery
+                        |                 &gt;
+                        option(value="pickup") Pick Up
+                        option(value="homedelivery") Home Delivery
+                .padding
+                    select#pytmode.width2(name='pytmode')
+                        option(value='select mode of payment')
+                         | Select mode of payment
+                        |                 &gt;
+                        option(value="cash") Cash
+                        option(value="mobilemoney") Mobile Money   
+                .padding       
+                        input#productimage(type='file' name='productimage')
+            div
+                input#address.form-control-2.form-float(type='text', name='address', placeholder='Adress')
+            p.null-field
+            .padding
+            button#submit.width3(type='submit') Upload
+        p.copyright
+            | &copy; Massajja Ubarn farmer initiative. All rights reserved!
+        script(src='/validate.js')

@@ -1,0 +1,132 @@
+doctype html
+head
+  meta(charset='utf-8')
+  meta(http-equiv='X-UA-Compatible', content='IE=edge')
+  title Page Title
+  meta(name='viewport', content='width=device-width, initial-scale=1')
+  link(href='bootstrap/css/bootstrap.css', rel='stylesheet')
+  link(rel='stylesheet', type='text/css', media='screen', href='css/main.css')
+  script(src='main.js')
+  link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css')
+// navbar
+nav.navbar.navbar-expand-lg.bg-green.navcolor(;='')
+  .container-fluid
+    a.navbar-brand(href='#') UFARM
+    button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarText', aria-controls='navbarText', aria-expanded='false', aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    #navbarText.collapse.navbar-collapse
+      ul.navbar-nav.me-auto.mb-2.mb-lg-0
+        li.nav-item
+          a.nav-link.active(aria-current='page', href='#') Home
+        li.nav-item
+          a.nav-link(href='#') Pricing
+    .dropdown.pb-4
+      a#dropdownUser1.d-flex.align-items-center.text-black.text-decoration-none.dropdown-toggle(href='#', data-bs-toggle='dropdown', aria-expanded='false')
+        img.rounded-circle.navimage(src='https://github.com/mdo.png', alt='hugenerd', width='40', height='40')
+        span.d-none.d-sm-inline.mx-1 FarmerOne
+      ul.dropdown-menu.dropdown-menu-dark.text-small.shadow
+        li
+          a.dropdown-item(href='#') New project...
+        li
+          a.dropdown-item(href='#') Settings
+        li
+          a.dropdown-item(href='#') Profile
+        li
+          hr.dropdown-divider
+        li
+        form(method="POST" action='/logout')
+          button.btn.btn-style.btn-color(type='submit') Logout
+// Sidebar
+.container-fluid
+  .row.flex-nowrap
+    .col-auto.col-md-3.col-xl-2.px-sm-2.px-0.bg-dark
+      .d-flex.flex-column.align-items-center.align-items-sm-start.px-3.pt-2.text-white.min-vh-100
+        a.d-flex.align-items-center.pb-3.mb-md-0.me-md-auto.text-white.text-decoration-none(href='/')
+          span.fs-5.d-none.d-sm-inline Menu
+        ul#menu.nav.nav-pills.flex-column.mb-sm-auto.mb-0.align-items-center.align-items-sm-start
+          li.nav-item
+            a.nav-link.align-middle.px-0.fontcolor(href='#')
+              i.fs-4.bi-house
+              span.ms-1.d-none.d-sm-inline Home
+          li
+            a.nav-link.px-0.align-middle.fontcolor(href='#submenu1', data-bs-toggle='collapse')
+              i.fs-4.bi-speedometer2
+              span.ms-1.d-none.d-sm-inline Dashboard
+            ul#submenu1.collapse.show.nav.flex-column.ms-1(data-bs-parent='#menu')
+              li.w-100
+                a.nav-link.px-0(href='#')
+                  span.d-none.d-sm-inline Item
+                  |  1
+              li
+                a.nav-link.px-0(href='#')
+                  span.d-none.d-sm-inline Item
+                  |  2
+          li
+            a.nav-link.px-0.align-middle.fontcolor(href='#')
+              i.fs-4.bi-table
+              span.ms-1.d-none.d-sm-inline Orders List
+          li
+            a.nav-link.px-0.align-middle.fontcolor(href='#submenu3', data-bs-toggle='collapse')
+              i.fs-4.bi-grid
+              span.ms-1.d-none.d-sm-inline Products List
+            ul#submenu3.collapse.nav.flex-column.ms-1(data-bs-parent='#menu')
+              li.w-100
+                a.nav-link.px-0(href='#')
+                  span.d-none.d-sm-inline Product
+                  |  1
+              li
+                a.nav-link.px-0(href='#')
+                  span.d-none.d-sm-inline Product
+                  |  2
+              li
+                a.nav-link.px-0(href='#')
+                  span.d-none.d-sm-inline Product
+                  |  3
+              li
+                a.nav-link.px-0(href='#')
+                  span.d-none.d-sm-inline Product
+                  |  4
+          li
+            a.nav-link.px-0.align-middle.fontcolor(href='#')
+              i.fs-4.bi-people
+              span.ms-1.d-none.d-sm-inline UFarmers List
+        hr
+    .col.py-3(style='background-color:rgb(229, 233, 233);')
+      #wrapper.d-flex
+        |...
+        // Page Content
+        div
+          nav.navbar.navbar-expand-lg.navbar-light.bg-transparent.py-4.px-4
+            .d-flex.align-items-center
+              i#menu-toggle.fas.fa-align-left.primary-text.fs-4.me-3
+              h2.fs-2.m-0 Reports
+            button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+              span.navbar-toggler-icon
+          .container-fluid.px-4
+            .row.g-3.my-2
+              .col-md-3
+                .p-3.bg-white.shadow-sm.d-flex.justify-content-around.align-items-center.rounded
+                  div
+                    h3.fs-2 20
+                    p.fs-5 UFarmers
+                  i.fas.bi-people.fs-1.primary-text.border.rounded-full.secondary-bg.p-3
+              .col-md-3
+                .p-3.bg-white.shadow-sm.d-flex.justify-content-around.align-items-center.rounded
+                  div
+                    h3.fs-2 920
+                    p.fs-5 Products
+                  i.bi-grid.fs-1.primary-text.border.rounded-full.secondary-bg.p-3
+              .col-md-3
+                .p-3.bg-white.shadow-sm.d-flex.justify-content-around.align-items-center.rounded
+                  div
+                    h3.fs-2 899
+                    p.fs-5 Orders
+                  i.fas.bi-table.fs-1.primary-text.border.rounded-full.secondary-bg.p-3
+              .col-md-3
+                .p-3.bg-white.shadow-sm.d-flex.justify-content-around.align-items-center.rounded
+                  div
+                    h3.fs-2  +5%
+                    p.fs-5 delivery
+                  i.fas.bi-truck.fs-1.primary-text.border.rounded-full.secondary-bg.p-3
+      // /#page-content-wrapper
+script(src='bootstrap/js/bootstrap.bundle.js')

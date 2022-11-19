@@ -12,6 +12,7 @@ head
   link(href='../css/bootstrap-icons.css', rel='stylesheet')
   link(href='../css/produce.css', rel='stylesheet')
   link(rel='stylesheet', type='text/css', href='../css/main.css')
+  //- link(href= 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css' rel='stylesheet')
 // nav bar
 nav.navbar.navbar-expand-lg.fixed-top.navbgcolor
   .container-fluid
@@ -59,10 +60,10 @@ main
           h2.mb-lg-5.mb-4 Dairy Products
         if goods.length
             each item in goods
-                .col-lg-4.col-md-6.col-12
+                .col-4(style='')
                     if item.status == "Approved" && item.productcategory == "Dairy" && item.availability == "available"
                         .products-thumb
-                            img.img-fluid.products-image.img(src="/"+item.productimage, alt="Image") 
+                            img.rounded.img-fluid.products-image.img(src="/"+item.productimage, alt="Image" width='200px' height="200px") 
                             .products-info.d-flex.flex-wrap.align-items-center
                             h4.mb-0 #{item.productname}
                             span.price-tag.bg-white.shadow-lg.ms-4
@@ -72,20 +73,20 @@ main
                                 h6.reviews-text.mb-0.me-3 +1%
                                 p.reviews-text.mb-0.ms-4 delivery
                                 a.btn.btn-secondary.btn-block(href='/produce/order/'+item._id) order
-                    else if item.status == "Approved" && item.productcategory == "Dairy" && item.availability == "booked"
-                        .products-thumb
-                            img.img-fluid.products-image.img(src="/"+item.productimage, alt="Image") 
-                            .products-info.d-flex.flex-wrap.align-items-center
-                            h4.mb-0 #{item.productname}
-                            span.price-tag.bg-white.shadow-lg.ms-4
-                                small Ugx
-                                | #{item.unitprice}
-                            .d-flex.flex-wrap.align-items-center.w-100.mt-2
-                                h6.reviews-text.mb-0.me-3 booked
-                                p.reviews-text.mb-0.ms-4 delivery
+                    //- else if item.status == "Approved" && item.productcategory == "Dairy" && item.availability == "booked"
+                    //-     .products-thumb
+                    //-         img.img-fluid.products-image.img(src="/"+item.productimage, alt="Image" width='150px' height="150px") 
+                    //-         .products-info.d-flex.flex-wrap.align-items-center
+                    //-         h4.mb-0 #{item.productname}
+                    //-         span.price-tag.bg-white.shadow-lg.ms-4
+                    //-             small Ugx
+                    //-             | #{item.unitprice}
+                    //-         .d-flex.flex-wrap.align-items-center.w-100.mt-2
+                    //-             h6.reviews-text.mb-0.me-3 booked
+                    //-             p.reviews-text.mb-0.ms-4 delivery
                     else if item.status == "Approved" && item.productcategory == "Dairy" && item.availability == "N/A"
                         .products-thumb
-                            img.img-fluid.products-image.img(src="/"+item.productimage, alt="Image" ) 
+                            img.img-fluid.products-image.img(src="/"+item.productimage, alt="Image"  width='150px' height="150px" ) 
                             .products-info.d-flex.flex-wrap.align-items-center
                             h4.mb-0 #{item.productname}
                             span.price-tag.bg-white.shadow-lg.ms-4
@@ -102,9 +103,9 @@ main
         if goods.length
             each item in goods
                 .col-lg-4.col-md-6.col-12
-                    if item.status == "Approved" && item.productcategory == "Dairy" && item.availability == "available"
+                    if item.status == "Approved" && item.productcategory == "Horticulture" && item.availability == "available"
                         .products-thumb
-                            img.img-fluid.products-image.img(src="/"+item.productimage, alt="Image") 
+                            img.img-fluid.products-image.img(src="/"+item.productimage, alt="Image" width='150px' height="150px") 
                             .products-info.d-flex.flex-wrap.align-items-center
                             h4.mb-0 #{item.productname}
                             span.price-tag.bg-white.shadow-lg.ms-4
@@ -114,20 +115,20 @@ main
                                 h6.reviews-text.mb-0.me-3 +1%
                                 p.reviews-text.mb-0.ms-4 delivery
                                 a.btn.btn-secondary.btn-block(href='/produce/order/'+item._id) order
-                    else if item.status == "Approved" && item.productcategory == "Dairy" && item.availability == "booked"
+                    //- else if item.status == "Approved" && item.productcategory == "Horticulture" && item.availability == "booked"
+                    //-     .products-thumb
+                    //-         img.img-fluid.products-image.img(src="/"+item.productimage, alt="Image") 
+                    //-         .products-info.d-flex.flex-wrap.align-items-center
+                    //-         h4.mb-0 #{item.productname}
+                    //-         span.price-tag.bg-white.shadow-lg.ms-4
+                    //-             small Ugx
+                    //-             | #{item.unitprice}
+                    //-         .d-flex.flex-wrap.align-items-center.w-100.mt-2
+                    //-             h6.reviews-text.mb-0.me-3 booked
+                    //-             p.reviews-text.mb-0.ms-4 delivery
+                    else if item.status == "Approved" && item.productcategory == "Horticulture" && item.availability == "N/A"
                         .products-thumb
-                            img.img-fluid.products-image.img(src="/"+item.productimage, alt="Image") 
-                            .products-info.d-flex.flex-wrap.align-items-center
-                            h4.mb-0 #{item.productname}
-                            span.price-tag.bg-white.shadow-lg.ms-4
-                                small Ugx
-                                | #{item.unitprice}
-                            .d-flex.flex-wrap.align-items-center.w-100.mt-2
-                                h6.reviews-text.mb-0.me-3 booked
-                                p.reviews-text.mb-0.ms-4 delivery
-                    else if item.status == "Approved" && item.productcategory == "Dairy" && item.availability == "N/A"
-                        .products-thumb
-                            img.img-fluid.products-image.img(src="/"+item.productimage, alt="Image" ) 
+                            img.img-fluid.products-image.img(src="/"+item.productimage, alt="Image" width='150px' height="150px" ) 
                             .products-info.d-flex.flex-wrap.align-items-center
                             h4.mb-0 #{item.productname}
                             span.price-tag.bg-white.shadow-lg.ms-4
@@ -146,7 +147,7 @@ main
                 .col-lg-4.col-md-6.col-12
                     if item.status == "Approved" && item.productcategory == "Poultry" && item.availability == "available"
                         .products-thumb
-                            img.img-fluid.products-image.img(src="/"+item.productimage, alt="Image") 
+                            img.img-fluid.products-image.img(src="/"+item.productimage, alt="Image" width='150px' height="150px") 
                             .products-info.d-flex.flex-wrap.align-items-center
                             h4.mb-0 #{item.productname}
                             span.price-tag.bg-white.shadow-lg.ms-4
@@ -156,20 +157,20 @@ main
                                 h6.reviews-text.mb-0.me-3 +1%
                                 p.reviews-text.mb-0.ms-4 delivery
                                 a.btn.btn-secondary.btn-block(href='/produce/order/'+item._id) order
-                    else if item.status == "Approved" && item.productcategory == "Poultry" && item.availability == "booked"
-                        .products-thumb
-                            img.img-fluid.products-image.img(src="/"+item.productimage, alt="Image") 
-                            .products-info.d-flex.flex-wrap.align-items-center
-                            h4.mb-0 #{item.productname}
-                            span.price-tag.bg-white.shadow-lg.ms-4
-                                small Ugx
-                                | #{item.unitprice}
-                            .d-flex.flex-wrap.align-items-center.w-100.mt-2
-                                h6.reviews-text.mb-0.me-3 booked
-                                p.reviews-text.mb-0.ms-4 delivery
+                    //- else if item.status == "Approved" && item.productcategory == "Poultry" && item.availability == "booked"
+                    //-     .products-thumb
+                    //-         img.img-fluid.products-image.img(src="/"+item.productimage, alt="Image" width='150px' height="150px") 
+                    //-         .products-info.d-flex.flex-wrap.align-items-center
+                    //-         h4.mb-0 #{item.productname}
+                    //-         span.price-tag.bg-white.shadow-lg.ms-4
+                    //-             small Ugx
+                    //-             | #{item.unitprice}
+                    //-         .d-flex.flex-wrap.align-items-center.w-100.mt-2
+                    //-             h6.reviews-text.mb-0.me-3 booked
+                    //-             p.reviews-text.mb-0.ms-4 delivery
                     else if item.status == "Approved" && item.productcategory == "Poultry" && item.availability == "N/A"
                         .products-thumb
-                            img.img-fluid.products-image.img(src="/"+item.productimage, alt="Image" ) 
+                            img.img-fluid.products-image.img(src="/"+item.productimage, alt="Image" width='150px' height="150px") 
                             .products-info.d-flex.flex-wrap.align-items-center
                             h4.mb-0 #{item.productname}
                             span.price-tag.bg-white.shadow-lg.ms-4
