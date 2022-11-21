@@ -2,69 +2,113 @@ doctype html
 head
   meta(charset='utf-8')
   meta(http-equiv='X-UA-Compatible', content='IE=edge')
-  title Approved list
+  title Page Title
   meta(name='viewport', content='width=device-width, initial-scale=1')
   link(href='bootstrap/css/bootstrap.css', rel='stylesheet')
-  link(rel='stylesheet', type='text/css', media='screen', href='css/main.css')
+  link(rel='stylesheet', type='text/css', media='screen', href='../css/main.css')
   script(src='main.js')
   link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css')
-  meta(charset='UTF-8')
-  meta(name='viewport', content='width=device-width, initial-scale=1.0')
   link(rel='stylesheet', href='css/table.css')
-  link(href='bootstrap/css/bootstrap.css', rel='stylesheet')
-#nav-tab.nav.nav-tabs(role='tablist')
 // navbar
 nav.navbar.navbar-expand-lg.bg-green.navcolor(;='')
   .container-fluid
-    a.navbar-brand(href='#') UFARM
+    a.navbar-brand#selector(href='#') &#217;&#646;ARM
     button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarText', aria-controls='navbarText', aria-expanded='false', aria-label='Toggle navigation')
       span.navbar-toggler-icon
     #navbarText.collapse.navbar-collapse
       ul.navbar-nav.me-auto.mb-2.mb-lg-0
         li.nav-item
-          a.nav-link.active(aria-current='page', href='#') Home
+          a.nav-link.active(aria-current='page', href='/ufarm') Home
         li.nav-item
-          a.nav-link(href='#') Pricing
+          a.nav-link(href='/seelistedlist') Market
     .dropdown.pb-4
-      
+      a#dropdownUser1.d-flex.align-items-center.text-black.text-decoration-none.dropdown-toggle(href='#', data-bs-toggle='dropdown', aria-expanded='false')
         img.rounded-circle.navimage(src='https://github.com/mdo.png', alt='hugenerd', width='40', height='40')
-        span.d-none.d-sm-inline.mx-1 Agr Officer
-body(style='background-color:#fafefa;')
-    #page-wrap
-    h1 Approved Products List
-    div
-        form(method="GET" action='/productlist')
-            button.btn.btn-secondary.btn-block(type='submit') Approve New Product
-    table.container(style='background-color:#e3f8e6f5;')
-        tr
-            th Name
-            th Category
-            th Price
-            th Avail
-            th Type
-            th Image
-            th Changes
-        tbody 
-            if goods.length
-                each item in goods
-                    if item.status == "Approved"
-                        tr.tds 
-                                td #{item.productname}
-                                td #{item.productcategory}
-                                td #{item.unitprice}
-                                td #{item.availability}
-                                td #{item.producttype}
-                                td 
-                                    img.rounded(src="/"+item.productimage, alt="Image" width='70px' height="70px") 
-                                //- td #{moment(us
-                                td
-                                    a.btn.btn-secondary.btn-block(style='height:40px; width:60px;')(href='/produce/available/'+item._id) Avail
-                                    form(method="post" action='/produce/delete')
-                                        input(type="hidden" placeholder="" name="id", value=item._id)
-                                        button.btn.btn-danger.btn-block(type="submit") Delete
-            div.form-row
-                div.col.form-group
-                    a(class='button' href='/agricOfficerDash') Back
-
-    block footer
-        div.col-md-12 ©️ 2022 UFARM Masajja Tukolerewamu Incorporated
+        span.d-none.d-sm-inline.mx-1 Farmer One 
+      ul.dropdown-menu.dropdown-menu-dark.text-small.shadow
+        li
+          a.dropdown-item(href='/ufarmerupload') 
+        li
+          a.dropdown-item(href='/productlist') productlist
+        li
+          hr.dropdown-divider
+        li
+        form(method="POST" action='/logout')
+          button.btn.btn-success.btn-block(type='submit') Logout
+// Sidebar
+.container-fluid
+  .row.flex-nowrap
+    .col-auto.col-md-3.col-xl-2.px-sm-2.px-0.bg-dark
+      .d-flex.flex-column.align-items-center.align-items-sm-start.px-3.pt-2.text-white.min-vh-100
+        a.d-flex.align-items-center.pb-3.mb-md-0.me-md-auto.text-white.text-decoration-none(href='/')
+          span.fs-5.d-none.d-sm-inline Menu
+        ul#menu.nav.nav-pills.flex-column.mb-sm-auto.mb-0.align-items-center.align-items-sm-start
+          li.nav-item
+            a.nav-link.align-middle.px-0.fontcolor(href='#')
+              i.fs-4.bi-table
+              span.ms-1.d-none.d-sm-inline.navfontcolor Approved List
+          li
+            a.nav-link.px-0.align-middle.fontcolor(href='/productlist')
+              i.fs-4.bi-grid
+              span.ms-1.d-none.d-sm-inline Product List
+          li
+            a.nav-link.px-0.align-middle.fontcolor(href='#submenu3', data-bs-toggle='collapse')
+              i.fs-4.bi-people
+              span.ms-1.d-none.d-sm-inline Users List
+            ul#submenu3.collapse.nav.flex-column.ms-1(data-bs-parent='#menu')
+              li.w-100
+                a.nav-link.px-0(href='/UrbanFarmerList')
+                  span.d-none.d-sm-inline UrbanFarmer List
+          li
+            a.nav-link.px-0.align-middle.fontcolor(href='/seeorderslist')
+              i.fs-4.bi-truck
+              span.ms-1.d-none.d-sm-inline Orders List
+          li
+            a.nav-link.px-0.align-middle.fontcolor(href='#submenu3', data-bs-toggle='collapse')
+              i.fs-4.bi-speedometer2
+              span.ms-1.d-none.d-sm-inline Dashboard
+            ul#submenu3.collapse.nav.flex-column.ms-1(data-bs-parent='#menu')
+              li.w-100
+                a.nav-link.px-0(href='/dashboarduf')
+                  span.d-none.d-sm-inline Urban Farmer
+                  |  
+              li
+                a.nav-link.px-0(href='/dashboardfo')
+                  span.d-none.d-sm-inline Farmer One
+                  |  
+              li
+                a.nav-link.px-0(href='/dashboardao')
+                  span.d-none.d-sm-inline Agric Officer
+                  |  
+        hr
+    .col.py-3(style='background-color:#fafefa;')
+        h1 Approved Products List
+        table.container(style='background-color:#e3f8e6f5;')
+            tr
+                th Name
+                th Category
+                th Price
+                th Avail
+                th Type
+                th Image
+                th Changes
+            tbody 
+                if goods.length
+                    each item in goods
+                        if item.status == "Approved"
+                            tr.tds 
+                                    td #{item.productname}
+                                    td #{item.productcategory}
+                                    td #{item.unitprice}
+                                    td #{item.availability}
+                                    td #{item.producttype}
+                                    td 
+                                        img.rounded(src="/"+item.productimage, alt="Image" width='70px' height="70px") 
+                                    //- td #{moment(us
+                                    td
+                                        a.btn.btn-secondary.btn-block(style='height:40px; width:60px;')(href='/produce/available/'+item._id) Avail
+                                        form(method="post" action='/produce/delete')
+                                            input(type="hidden" placeholder="" name="id", value=item._id)
+                                            button.btn.btn-danger.btn-block(type="submit") Delete      
+        // /#page-content-wrapper
+  script(src='bootstrap/js/bootstrap.bundle.js')

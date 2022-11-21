@@ -6,7 +6,7 @@ head
   link(rel='stylesheet', type='text/css', href='../css/style.css')
 .container
   #form-wrapper
-    form.form-padding(method="GET" action='/dashboardfo')
+    form.form-padding(method="GET" action='/dashboardao')
               button.btn.btn-style.btn-dark(type='') Cancel
     form.form-padding(action='/registerfo' method='post' onsubmit="return fovalidate(event);" )
       .container2
@@ -22,7 +22,7 @@ head
         input#names.form-control-2.width-lg(type='text' name='names' placeholder='Fullname')
         small#nameserr
       .padding
-        input#dateofbirth.form-control-2.width-lg(type='date' name='dateofbirth' placeholder='dateOfBirth')
+        input#dateofbirth.form-control-2.width-lg(type='date' name='dateofbirth' placeholder='dateOfBirth' max='2005-01-01')
         small#dateofbirtherr
       .container2
         .padding

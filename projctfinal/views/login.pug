@@ -10,38 +10,21 @@ head
   link(rel='stylesheet', href='css/login.css')
 body
   div.bg
-    // nav bar
-    nav.navbar.navbar-expand-lg.fixed-top.navbgcolor
+    // navbar
+    nav.navbar.navbar-expand-lg.bg-green.navcolor(;='')
       .container-fluid
-        a.navbar-brand.white(href='#')
-          h4  UFARM
-        button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+        a.navbar-brand#selector(href='#') &#217;&#646;ARM
+        button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarText', aria-controls='navbarText', aria-expanded='false', aria-label='Toggle navigation')
           span.navbar-toggler-icon
-        #navbarSupportedContent.collapse.navbar-collapse
+        #navbarText.collapse.navbar-collapse
           ul.navbar-nav.me-auto.mb-2.mb-lg-0
-            li.nav-item.dropdown
-              a.nav-link.dropdown-toggle(href='#', role='button', data-bs-toggle='dropdown', aria-expanded='false', style='color:white;')
-                | Market
-              ul.dropdown-menu
-                li
-                  a.dropdown-item(href='#') Pricing
-                li
-                  a.dropdown-item(href='#') Make booking
-                li
-                  hr.dropdown-divider
-                li
-                  a.dropdown-item(href='#') Something else here
-            li
-              a.nav-link.white(aria-current='page', href='#') Home
-            li
-              a.nav-link.white(href='#') About Us
-          form.d-flex
-            .container-fluid
-              a.navbar-brand.white(href='#')
-                a.btn.btn-success(href='#') Login
-              button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
-                span.navbar-toggler-icon
-              #navbarSupportedContent.collapse.navbar-collapse
+            li.nav-item
+              a.nav-link.active(aria-current='page', href='/ufarm') Home
+            li.nav-item
+              a.nav-link(href='/seelistedlist') Market
+        .dropdown.pb-4
+          a#dropdownUser1.d-flex.align-items-center.text-black.text-decoration-none.dropdown-toggle(href='#', data-bs-toggle='dropdown', aria-expanded='false')
+            a.btn.btn-success(href='#') Login
     // Form
     .container.padding
       .row.tm-mt-big
@@ -50,7 +33,7 @@ body
             .row
               .col-12.text-center
                 i.fas.fa-3x.fa-tachometer-alt.tm-site-icon.text-center
-                h2.tm-block-title.mt-3 Login
+                h2.tm-block-title.mt-3#selector(href='#') &#217;&#646;ARM
             .row.mt-2
               .col-12
                 form.tm-login-form(action='/login' method='post')

@@ -148,7 +148,7 @@ strong {
 
 
 .heading2 {
-  background-image: url('5.jpg');
+  background-image: url('../image/5.jpg');
 }
   .price-tag {
   background: var(--white-color);
@@ -268,3 +268,19 @@ footer p { font-size:13px; color:#CCC; padding-bottom:0px; margin-bottom:8px;}
 .social_footer_ul li { padding-left:20px; padding-top:10px; float:left; }
 .social_footer_ul li a { color:#CCC; border:1px solid #CCC; padding:8px;border-radius:50%;}
 .social_footer_ul li i {  width:20px; height:20px; text-align:center;}
+
+.centered{
+  align-items: center;
+  margin-left: 430px;
+  font-size: 30px;
+  font-family: serif;
+
+}
+.imageheight{
+  height: 800px;
+  width:900px;
+}
+.fontserif{
+  font-style: serif;
+}
+

@@ -3,10 +3,10 @@ const router = express.Router();
 //Importing model
 const Registration = require('../models/User');
 //structure of a route
-router.get('/home',(req,res) =>{
+router.get('/ufarm',(req,res) =>{
 res.render('home');
 })
-router.post('/home',async(req,res) =>{
+router.post('/ufarm',async(req,res) =>{
     console.log(req.body);
     try{
         const user = new Registration(req.body);

@@ -1,10 +1,10 @@
 
 body{
-    background-image: url(../image/dashboard.JPG);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background: linear-gradient(to bottom, #000000b8, #000000b8), url('../image/dashboard.JPG');
-    color: black;
+  background-image: url(../image/dashboard.JPG);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background: linear-gradient( #494949b8, #8d8c8cb8), url('../image/dashboard.JPG');
+  color: rgb(8, 8, 8);
 
 }
     .container {

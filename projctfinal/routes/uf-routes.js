@@ -67,26 +67,34 @@ router.get('/productlist',connectEnsureLogin.ensureLoggedIn(), async (req,res) =
 
 // Update get and post Route
 router.get('/produce/update/:id', async (req,res) => {
-  try {
-    const updateProduct = await UrbanFarmerUpload.findOne({_id:req.params.id})
-    res.render('update-product', {product:updateProduct});
-    console.log('Updated Produce', updateProduct);
-  } catch (error) {
-    res.status(400).send('Sorry we seem unable to update the product');
-  }
-});
+      req.session.user = req.user;
+      if(req.user.role == 'FarmerOne'){
+          try {
+            const updateProduct = await UrbanFarmerUpload.findOne({_id:req.params.id})
+            res.render('update-product', {product:updateProduct});
+            console.log('Updated Produce', updateProduct);
+          } catch (error) {
+            res.status(400).send('Sorry we seem unable to update the product');
+          }
+        }
+          else {
+            res.send("This page is only accessed by Farmer Ones")
+          }
+        });
 
-router.post('/produce/update', async (req,res) => {
-  try {
-    await UrbanFarmerUpload.findOneAndUpdate({_id:req.query.id}, req.body);
-    res.redirect('/productlist');
-  } catch (error) {
-    res.status(400).send('Sorry we were unable to update product');
-  }
-});
+    router.post('/produce/update', async (req,res) => {
+      try {
+        await UrbanFarmerUpload.findOneAndUpdate({_id:req.query.id}, req.body);
+        res.redirect('/productlist');
+      } catch (error) {
+        res.status(400).send('Sorry we were unable to update product');
+      }
+    });
 
 // Approve get and post Route
 router.get('/produce/approve/:id', async (req,res) => {
+  req.session.user = req.user;
+  if(req.user.role == 'FarmerOne'){
   try {
     const updateProduct = await UrbanFarmerUpload.findOne({_id:req.params.id})
     res.render('approve', {product:updateProduct});
@@ -94,6 +102,10 @@ router.get('/produce/approve/:id', async (req,res) => {
   } catch (error) {
     res.status(400).send('Sorry we seem unable to approve the product');
   }
+}
+else {
+  res.send("This page is only accessed by Farmer Ones")
+}
 });
 
 router.post('/produce/approve', async (req,res) => {
@@ -195,13 +207,19 @@ router.get('/seeorderslist', async (req,res) => {
 
 // Delete Product
 router.post('/produce/delete', async (req,res) => {                   // the route path here is attached to the form action of the deletebe button in the productlist.pug file where items from where deleting items will be effected.
-  try {
-    await UrbanFarmerUpload.deleteOne({_id:req.body.id});             // await is normally on database operations so the key word await is normally followed by the name of the database collection where the operation is going to take place.
-    res.redirect('back');
-  } catch (error) {
-    res.status(400).send('Sorry product could not be deleted');
-  }
-});
+  req.session.user = req.user;
+  if(req.user.role == 'FarmerOne'){
+      try {
+        await UrbanFarmerUpload.deleteOne({_id:req.body.id});             // await is normally on database operations so the key word await is normally followed by the name of the database collection where the operation is going to take place.
+        res.redirect('back');
+      } catch (error) {
+        res.status(400).send('Sorry product could not be deleted');
+      }
+    }
+    else {
+      res.send("Only Farmer Ones are allowed to delete a products")
+    }
+    });
 
 
 module.exports = router; 

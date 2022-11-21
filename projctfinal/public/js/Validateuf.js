@@ -49,7 +49,7 @@ const ufvalidate = (event) => {
     // var residenceError = document.getElementById('residenceerr');
     
     //Role
-    if(role.value==''){
+    if(role.value=='role'){
         role.style.border = '1px solid red';
         roleError.textContent='Please specify role';
         roleError.style ="color:red; font-size:12px; font-family:Arial, Helvetica, Sans-serif;";
@@ -100,7 +100,7 @@ const ufvalidate = (event) => {
     }
 
     //Ward
-    if(ward.value==''){
+    if(ward.value=='select your Ward'){
         ward.style.border = '1px solid red';
         wardError.textContent='Please specify ward';
         wardError.style ="color:red; font-size:12px; font-family:Arial, Helvetica, Sans-serif;";
@@ -111,7 +111,7 @@ const ufvalidate = (event) => {
     }
     
     //Gender
-    if(gender.value==''){
+    if(gender.value=='select your Gender'){
         gender.style.border = '1px solid red';
         genderError.textContent='Please specify gender';
         genderError.style ="color:red; font-size:12px; font-family:Arial, Helvetica, Sans-serif;";
@@ -122,7 +122,7 @@ const ufvalidate = (event) => {
     }
     
     //Activity
-    if(activity.value==''){
+    if(activity.value=='select activity'){
         activity.style.border = '1px solid red';
         activityError.textContent='Please specify activity';
         activityError.style ="color:red; font-size:12px; font-family:Arial, Helvetica, Sans-serif;";
@@ -133,7 +133,7 @@ const ufvalidate = (event) => {
     }
 
     //Residence
-    if(residence.value==''){
+    if(residence.value=='select residence type'){
         residence.style.border = '1px solid red';
         residenceError.textContent='Please specify residence';
         residenceError.style ="color:red; font-size:12px; font-family:Arial, Helvetica, Sans-serif;";
@@ -220,11 +220,15 @@ const ufvalidate = (event) => {
         yearsofstayError.textContent='Enter years at current residence';
         yearsofstayError.style ="color:red; font-size:12px; font-family:Arial, Helvetica, Sans-serif;";
         val++
+    }else if(!((yearsofstay.value)>10)){
+        yearsofstay.style.border = '1px solid red';
+        yearsofstayError.textContent='years of stay must be greater than 10';
+        yearsofstayError.style ="color:red; font-size:12px; font-family:Arial, Helvetica, Sans-serif;";
+        val++
     }else{
         yearsofstay.style.border='1px solid green';
         yearsofstayError.textContent = '';
     }
-    
     //password
     if(password.value ==''){
         password.style.border = '1px solid red';

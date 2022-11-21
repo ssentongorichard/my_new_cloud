@@ -23,7 +23,7 @@ router.post('/registeruf',async(req,res) =>{
             if (error) {
                 throw error
             }
-            res.send('registration successful');
+            res.redirect('/registeruf');
         });
     }
     }catch (error) {
@@ -53,7 +53,7 @@ router.get('/registerfo',(req,res) =>{
                 if (error) {
                     throw error
                 }
-                res.send('registration successful');
+                res.redirect('/registerfo');
             });
         }
         }catch (error) {
@@ -73,13 +73,19 @@ router.get('/registerfo',(req,res) =>{
     })
 // //selecting UrbanFarmer from the database
 router.get("/UrbanFarmerList", async (req,res)=> {
-    try{
-        let urbanfarmers = await Registration.find({ role: "UrbanFarmer"});
-        res.render("UFList", {urbanfarmers:urbanfarmers});
-    } catch (error) {
-        res.status(400).send("Unable to find UrbanFarmers in the database")
-    }
-})
+        req.session.user = req.user;
+        if(req.user.role == 'FarmerOne' || req.user.role == 'AgricOfficer'){
+            try{
+                let urbanfarmers = await Registration.find({ role: "UrbanFarmer"});
+                res.render("UFList", {urbanfarmers:urbanfarmers});
+            } catch (error) {
+                res.status(400).send("Unable to find UrbanFarmers in the database")
+            }
+        }
+        else {
+            res.send("This page is only accessed by Farmer Ones")
+          }
+        })
 
 
 // Update get and post Route
@@ -144,11 +150,8 @@ router.get('/registerao',(req,res) =>{
         try{
             const user = new Registration(req.body);
             let uniqueExist = await Registration.findOne({foid:req.body.foid});
-            let ninNumberExist = await Registration.findOne({nid:req.body.nid});
             if (uniqueExist){
-                return res.status(400).send("Sorry foid you entered is aready existing");
-            }else if (ninNumberExist){
-                 return res.status(400).send("Sorry the nid you entered already exists");   
+                return res.status(400).send("Sorry foid you entered is aready existing");   
             }else{
             await Registration.register(user, req.body.password, (error) =>{
                 if (error) {

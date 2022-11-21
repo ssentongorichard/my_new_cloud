@@ -11,15 +11,15 @@ head
 // navbar
 nav.navbar.navbar-expand-lg.bg-green.navcolor(;='')
   .container-fluid
-    a.navbar-brand(href='#') UFARM
+    a.navbar-brand#selector(href='#') &#217;&#646;ARM
     button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarText', aria-controls='navbarText', aria-expanded='false', aria-label='Toggle navigation')
       span.navbar-toggler-icon
     #navbarText.collapse.navbar-collapse
       ul.navbar-nav.me-auto.mb-2.mb-lg-0
         li.nav-item
-          a.nav-link.active(aria-current='page', href='#') Home
+          a.nav-link.active(aria-current='page', href='/ufarm') Home
         li.nav-item
-          a.nav-link(href='#') Pricing
+          a.nav-link(href='/seelistedlist') Market
     .dropdown.pb-4
       a#dropdownUser1.d-flex.align-items-center.text-black.text-decoration-none.dropdown-toggle(href='#', data-bs-toggle='dropdown', aria-expanded='false')
         img.rounded-circle.navimage(src='https://github.com/mdo.png', alt='hugenerd', width='40', height='40')
@@ -29,8 +29,6 @@ nav.navbar.navbar-expand-lg.bg-green.navcolor(;='')
           a.dropdown-item(href='/ufarmerupload') Upload
         li
           a.dropdown-item(href='/productlist') productlist
-        li
-          a.dropdown-item(href='#') Profile
         li
           hr.dropdown-divider
         li
@@ -45,47 +43,24 @@ nav.navbar.navbar-expand-lg.bg-green.navcolor(;='')
           span.fs-5.d-none.d-sm-inline Menu
         ul#menu.nav.nav-pills.flex-column.mb-sm-auto.mb-0.align-items-center.align-items-sm-start
           li.nav-item
-            a.nav-link.align-middle.px-0.fontcolor(href='#')
-              i.fs-4.bi-house
-              span.ms-1.d-none.d-sm-inline Home
-          li
-            a.nav-link.px-0.align-middle.fontcolor(href='', data-bs-toggle='collapse')
-              i.fs-4.bi-speedometer2
-              span.ms-1.d-none.d-sm-inline Dashboard
-            ul#submenu1.collapse.show.nav.flex-column.ms-1(data-bs-parent='')
-              li.w-100
-                a.nav-link.px-0(href='/ufreports')
-                  span.d-none.d-sm-inline Reports
-                  |  1
-              li
-                a.nav-link.px-0(href='#')
-                  span.d-none.d-sm-inline Item
-                  |  2
-          li
-            a.nav-link.px-0.align-middle.fontcolor(href='#')
-              i.fs-4.bi-table
+            a.nav-link.align-middle.px-0.fontcolor(href='/seeorderslist')
+              i.fs-4.bi-truck
               span.ms-1.d-none.d-sm-inline Orders List
           li
-            a.nav-link.px-0.align-middle.fontcolor(href='#submenu3', data-bs-toggle='collapse')
-              i.fs-4.bi-grid
-              span.ms-1.d-none.d-sm-inline Products List
-            ul#submenu3.collapse.nav.flex-column.ms-1(data-bs-parent='#menu')
-              li.w-100
-                a.nav-link.px-0(href='#')
-                  span.d-none.d-sm-inline Product
-                  |  1
-              li
-                a.nav-link.px-0(href='#')
-                  span.d-none.d-sm-inline Product
-                  |  2
-              li
-                a.nav-link.px-0(href='#')
-                  span.d-none.d-sm-inline Product
-                  |  3
-              li
-                a.nav-link.px-0(href='#')
-                  span.d-none.d-sm-inline Product
-                  |  4
+            a.nav-link.px-0.align-middle.fontcolor(href='/ufreports', data-bs-toggle='collapse')
+              i.fs-4.bi-speedometer2
+              span.ms-1.d-none.d-sm-inline.navfontcolor UF Dashboard
+            ul#submenu1.collapse.show.nav.flex-column.ms-1(data-bs-parent='#menu')
+              
+          li
+            a.nav-link.px-0.align-middle.fontcolor(href='/seeapprovedlist')
+              i.fs-4.bi-table
+              span.ms-1.d-none.d-sm-inline Approved List
+          li
+            a.nav-link.px-0.align-middle.fontcolor(href='/productlist')
+              i.fs-4.bi-table
+              span.ms-1.d-none.d-sm-inline Product List 
+            
         hr
     .col.py-3(style='background-color:rgb(229, 233, 233);')
       #wrapper.d-flex
@@ -103,26 +78,26 @@ nav.navbar.navbar-expand-lg.bg-green.navcolor(;='')
               .col-md-3
                 .p-3.bg-white.shadow-sm.d-flex.justify-content-around.align-items-center.rounded
                   div
-                    h3.fs-2 2
-                    p.fs-5
-                  i.fas.bi-people.fs-1.primary-text.border.rounded-full.secondary-bg.p-3
+                    h3.fs-2 #{totalH.totalCost}
+                    p.fs-5 Horticulture:#{totalH.totalQuantity}
+                  i.fs-1.primary-text.border.rounded-full.secondary-bg.p-3 &#x1F34F;
               .col-md-3
                 .p-3.bg-white.shadow-sm.d-flex.justify-content-around.align-items-center.rounded
                   div
-                    h3.fs-2 920
-                    p.fs-5 Products
-                  i.bi-grid.fs-1.primary-text.border.rounded-full.secondary-bg.p-3
+                    h3.fs-2 #{totalD.totalCost}
+                    p.fs-5 Dairy:#{totalD.totalQuantity}
+                  i.fs-1.primary-text.border.rounded-full.secondary-bg.p-3 &#x1F404;
               .col-md-3
                 .p-3.bg-white.shadow-sm.d-flex.justify-content-around.align-items-center.rounded
                   div
-                    h3.fs-2 899
-                    p.fs-5 Orders
-                  i.fas.bi-table.fs-1.primary-text.border.rounded-full.secondary-bg.p-3
+                    h3.fs-2 #{totalP.totalCost}
+                    p.fs-5 Poultry:#{totalP.totalQuantity} 
+                  i.fs-1.primary-text.border.rounded-full.secondary-bg.p-3 &#x1F414;
               .col-md-3
                 .p-3.bg-white.shadow-sm.d-flex.justify-content-around.align-items-center.rounded
                   div
-                    h3.fs-2  +5%
-                    p.fs-5 delivery
+                    h3.fs-2  #{totalO.totalCost}
+                    p.fs-5 Orders:#{totalO.totalQuantity} 
                   i.fas.bi-truck.fs-1.primary-text.border.rounded-full.secondary-bg.p-3
       // /#page-content-wrapper
 script(src='bootstrap/js/bootstrap.bundle.js')

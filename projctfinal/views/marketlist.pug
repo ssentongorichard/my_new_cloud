@@ -1,49 +1,35 @@
 doctype html
 head
   meta(charset='utf-8')
-  meta(name='viewport', content='width=device-width, initial-scale=1')
-  meta(name='description', content='')
-  meta(name='author', content='')
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  meta(name='description' content='')
+  meta(name='author' content='')
   title FARM PRODUCTS
-  link(rel='preconnect', href='https://fonts.googleapis.com')
-  link(rel='preconnect', href='https://fonts.gstatic.com', crossorigin='')
+  link(rel='preconnect' href='https://fonts.googleapis.com')
+  link(rel='preconnect' href='https://fonts.gstatic.com', crossorigin='')
   link(href='https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap', rel='stylesheet')
-  link(href='../css/bootstrap.min.css', rel='stylesheet')
-  link(href='../css/bootstrap-icons.css', rel='stylesheet')
+  link(href='../css/bootstrap.min.css' rel='stylesheet')
+  link(href='../css/bootstrap-icons.css' rel='stylesheet')
   link(href= 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css' rel='stylesheet')
-  link(href='../css/produce.css', rel='stylesheet')
-  link(rel='stylesheet', type='text/css', href='../css/main.css')
+  link(href='../css/produce.css' rel='stylesheet')
+  link(rel='stylesheet' type='text/css' href='../css/main.css')
   link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous")
-  link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css')
+  link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css')
 // navbar
-nav#nav-wrapper.navbar.navbar-expand-lg.bg-green.navcolor(;='')
+nav.navbar.navbar-expand-lg.bg-green.navcolor(;='')
   .container-fluid
-    a.navbar-brand(href='#') 
-    img.rounded.navimage(src='image/ufarm.jpg', alt='U', width='60', height='50')
+    a.navbar-brand#selector(href='#') &#217;&#646;ARM
     button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarText', aria-controls='navbarText', aria-expanded='false', aria-label='Toggle navigation')
       span.navbar-toggler-icon
     #navbarText.collapse.navbar-collapse
       ul.navbar-nav.me-auto.mb-2.mb-lg-0
         li.nav-item
-          a.nav-link.active(aria-current='page', href='#') Home
+          a.nav-link.active(aria-current='page', href='/ufarm') Home
         li.nav-item
-          a.nav-link(href='#') Pricing
+          a.nav-link.white(href='#') Market
     .dropdown.pb-4
       a#dropdownUser1.d-flex.align-items-center.text-black.text-decoration-none.dropdown-toggle(href='#', data-bs-toggle='dropdown', aria-expanded='false')
-        img.rounded-circle.navimage(src='image/2.jpg', alt='U', width='40', height='40')
-        span.d-none.d-sm-inline.mx-1 Agr Officer
-      ul.dropdown-menu.dropdown-menu-dark.text-small.shadow
-        li
-          a.dropdown-item(href='#') New project...
-        li
-          a.dropdown-item(href='#') Settings
-        li
-          a.dropdown-item(href='#') Profile
-        li
-          hr.dropdown-divider
-        li
-        form(method="POST" action='/logout')
-          button.btn.btn-style.btn-color(type='submit') Logout
+        a.btn.btn-success(href='/login') Login
 main
   header.heading1.heading2
     .container
@@ -154,7 +140,7 @@ footer.footer
   .container
     ul.foote_bottom_ul_amrc
       li
-        a(href='/registerhome') Home
+        a(href='/ufarm') Home
       li
         a(href='/seelistedlist') Market
       li

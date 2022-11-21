@@ -67,4 +67,17 @@ padding-top: 50px;
 }
 .btn-color{
     color: white;
+    
+}
+.navfontcolor{
+    color:rgb(132, 194, 173);
+  }
+
+  #selector::first-letter {
+    text-transform: uppercase;
+    font-size:xx-large;
+    font-family:serif;
+    font-weight: bolder;
+    color:seagreen;
+
 }

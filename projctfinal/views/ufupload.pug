@@ -11,7 +11,7 @@ head
   #form-wrapper
     form.form-padding(method="GET" action='/dashboarduf')
               button(type='') Cancel
-    form(action='/ufarmerupload', name='urbanfarmerupload', enctype='multipart/form-data', method='POST')
+    form(action='/ufarmerupload', name='urbanfarmerupload' enctype='multipart/form-data' onsubmit="return uploadsvalidate(event);" method='POST' )
       div.padding  
         .row
           .padding
@@ -39,23 +39,23 @@ head
               label(for='stockcount')
               input#stockcount(type='number', name='stockcount')
               label(for='stockmeasure')
+              small#stockcounterr
               select#stockmeasure.width(name='stockmeasure')
                 option(value='')
                 option(value='gm') gm
                 option(value='Kgs') Kg
                 option(value='liters') ltr
-              small#stockcounterr
+              small#stockmeasureerr
             .radio
               lable(for='producttype') Product Type:
               input#organic(type='radio', name='producttype', value='organic')
-              small#organicerr
               label(for='organic') Organic
               input#noneorganic(type='radio', name='producttype', value='noneorganic')
               label(for='none-organic') None organic
               small#producttypeerr
             .width4.padding
               label(for='names') SupplierName:
-              select.width5(name="names") 
+              select#names.width5(name="names") 
                 if currentUser
                       option(value = currentUser.names) #{currentUser.names} 
               small#nameserr
@@ -80,31 +80,32 @@ head
               small#deliverymodeerr
             .width4
               label(for='productimage') Upload Image:
-              input#productimage(type='file', name='productimage', style='background-color:rgb(219, 237, 192);')
+              input#productimage(type='file' name='productimage' style='background-color:rgb(219, 237, 192);')
               small#productimageerr
               //- hidden customer fields
-              input#customeremail.width6(type='hidden', name='customeremail')
+              input#customeremail.width6(type='hidden' name='customeremail' )
               small#customeremailerr
-              input#customeraddress.width6(type='hidden', name='customeraddress')
+              input#customeraddress.width6(type='hidden' name='customeraddress' )
               small#customeraddresserr
               //- end of hidden fields
             .width5
               label(for='ward') Ward: 
-              select.width5(name='ward')
+              select#ward.width5(name='ward')
                         if currentUser
                             option(value = currentUser.ward) #{currentUser.ward}
               small#warderr
           .pad
-            label(for="address")#address.form-control-2.form-float
-            select.width-lg(name="address") 
+            label(for="address") 
+            select#address.width-lg(name="address") 
               if currentUser
                 option(value = currentUser.address) #{currentUser.address}
             small#addresserr
       div.margin 
         .flex
           .width3
-            input#frm-btn-ao(type='reset', value='Reset')
+            input#frm-btn-ao(type='reset' value='Reset')
             br
           .width3.button
-            input#upload-button.button(type='submit', value='Upload Product')
+            input#upload-button.button(type='submit' value='Upload Product')
+  script(src='/js/Validateuploads.js')
             

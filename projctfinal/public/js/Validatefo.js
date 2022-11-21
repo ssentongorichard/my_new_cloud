@@ -47,7 +47,7 @@ var addressError = document.getElementById('addresserr');
 // var residenceError = document.getElementById('residenceerr');
 
 //Role
-if(role.value==''){
+if(role.value=='role'){
     role.style.border = '1px solid red';
     roleError.textContent='Please specify role';
     roleError.style ="color:red; font-size:12px; font-family:Arial, Helvetica, Sans-serif;";
@@ -60,7 +60,7 @@ if(role.value==''){
 //datetoday
 if(datetoday.value==''){
     datetoday.style.border = '1px solid red';
-    datetodayError.textContent='Please enter date of birth';
+    datetodayError.textContent='Please enter date of registration';
     datetodayError.style ="color:red; font-size:12px; font-family:Arial, Helvetica, Sans-serif;";
     val++
 }else{
@@ -108,7 +108,7 @@ if(dateofbirth.value==''){
 // }
 
 //Gender
-if(gender.value==''){
+if(gender.value=='select your Gender'){
     gender.style.border = '1px solid red';
     genderError.textContent='Please specify gender';
     genderError.style ="color:red; font-size:12px; font-family:Arial, Helvetica, Sans-serif;";
@@ -119,7 +119,7 @@ if(gender.value==''){
 }
 
 //Activity
-if(activity.value==''){
+if(activity.value=='select activity'){
     activity.style.border = '1px solid red';
     activityError.textContent='Please specify activity';
     activityError.style ="color:red; font-size:12px; font-family:Arial, Helvetica, Sans-serif;";
@@ -152,6 +152,11 @@ if(yearsofstay.value==''){
     yearsofstayError.textContent='Enter years at current residence';
     yearsofstayError.style ="color:red; font-size:12px; font-family:Arial, Helvetica, Sans-serif;";
     val++
+}else if(!((yearsofstay.value)>10)){
+    yearsofstay.style.border = '1px solid red';
+    yearsofstayError.textContent='years of stay must be greater than 10';
+    yearsofstayError.style ="color:red; font-size:12px; font-family:Arial, Helvetica, Sans-serif;";
+val++
 }else{
     yearsofstay.style.border='1px solid green';
     yearsofstayError.textContent = '';
@@ -165,7 +170,7 @@ if(foid.value==''){
     foidError.textContent='Please enter unique ID';
     foidError.style ="color:red; font-size:12px; font-family:Arial, Helvetica, Sans-serif;";
     val++
-}else if(!(foid.valuefoid)){
+}else if(!(foid.value.match(foidRegex))){
     foid.style.border = '1px solid red';
     foidError.textContent='Please enter valid unique ID';
     foidError.style ="color:red; font-size:12px; font-family:Arial, Helvetica, Sans-serif;";
